@@ -2,12 +2,16 @@
 {
 	public class Program
 	{
-		public static readonly string inputFile = "[REDACTED]";
-		public static readonly string outputFolder = "[REDACTED]";
-
 		public static void Main(string[] args)
 		{
-			Converter.HandleFile(inputFile, outputFolder);
+			if (args.Length > 1)
+			{
+				Converter.HandleFile(args[0], args[1]);
+			}
+			else
+			{
+				Console.WriteLine("Not enough arguments.");
+			}
 		}
 	}
 }

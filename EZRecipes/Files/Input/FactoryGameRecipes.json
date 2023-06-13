@@ -20310,13 +20310,13 @@
         "DepLocked": false
     },
     {
-        "Name": "FICSIT Factory Cart™",
+        "Name": "FICSIT Factory Cartâ„¢",
         "ClassName": "ResourceSink_FactoryCart_C",
         "TechTier": 1,
         "Type": "Resource Sink",
         "Recipes": [
             {
-                "RecipeName": "Factory Cart™",
+                "RecipeName": "Factory Cartâ„¢",
                 "ClassName": "Recipe_FactoryCart_C",
                 "Category": "Tools",
                 "Events": [],
@@ -20345,7 +20345,7 @@
                 ],
                 "Products": [
                     {
-                        "Name": "Factory Cart™",
+                        "Name": "Factory Cartâ„¢",
                         "ClassName": "Desc_GolfCart_C",
                         "Amount": 1,
                         "ManualRate": 1.5,
@@ -21230,13 +21230,13 @@
         "DepLocked": false
     },
     {
-        "Name": "Golden FICSIT Factory Cart™",
+        "Name": "Golden FICSIT Factory Cartâ„¢",
         "ClassName": "ResourceSink_GoldenCart_C",
         "TechTier": 1,
         "Type": "Resource Sink",
         "Recipes": [
             {
-                "RecipeName": "Golden Factory Cart™",
+                "RecipeName": "Golden Factory Cartâ„¢",
                 "ClassName": "Recipe_GoldenCart_C",
                 "Category": "Tools",
                 "Events": [],
@@ -21265,7 +21265,7 @@
                 ],
                 "Products": [
                     {
-                        "Name": "Golden Factory Cart™",
+                        "Name": "Golden Factory Cartâ„¢",
                         "ClassName": "Desc_GolfCartGold_C",
                         "Amount": 1,
                         "ManualRate": 1.5,
@@ -34364,7 +34364,7 @@
         "DepLocked": false
     },
     {
-        "Name": "FICSIT™ Coffee Cup",
+        "Name": "FICSITâ„¢ Coffee Cup",
         "ClassName": "ResourceSink_CoffeeCup_C",
         "TechTier": 1,
         "Type": "Resource Sink",

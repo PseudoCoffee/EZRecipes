@@ -11,4 +11,14 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Files\Output\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Files\Input\FactoryGameRecipes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
