@@ -1,0 +1,48 @@
+{
+	"JS_LibClass": "/Script/FactoryGame.FGRecipe",
+	"JS_LibOuter": "/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Coal_2.Default__Recipe_Alternate_Coal_2_C",
+	"JS_LibValue":
+	{
+		"mDisplayNameOverride": true,
+		"mDisplayName": "Alternate: Biocoal",
+		"mIngredients":
+		{
+			"JS_InnerProperty": "mIngredients",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/GenericBiomass/Desc_GenericBiomass.Desc_GenericBiomass_C",
+					"Amount": 5
+				}
+			]
+		},
+		"mProduct":
+		{
+			"JS_InnerProperty": "mProduct",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/RawResources/Coal/Desc_Coal.Desc_Coal_C",
+					"Amount": 6
+				}
+			]
+		},
+		"mOverriddenCategory": "/Game/FactoryGame/Resource/ItemCategories/Cat_Biomass.Cat_Biomass_C",
+		"mManufacturingMenuPriority": 6,
+		"mManufactoringDuration": 8,
+		"mManualManufacturingMultiplier": 1,
+		"mProducedIn":
+		{
+			"JS_InnerProperty": "mProducedIn",
+			"JS_Values": [
+				"/Game/FactoryGame/Buildable/Factory/ConstructorMk1/Build_ConstructorMk1.Build_ConstructorMk1_C"
+			]
+		},
+		"mMaterialCustomizationRecipe": "",
+		"mRelevantEvents":
+		{
+			"JS_InnerProperty": "mRelevantEvents",
+			"JS_Values": []
+		},
+		"mVariablePowerConsumptionConstant": 0,
+		"mVariablePowerConsumptionFactor": 1
+	}
+}

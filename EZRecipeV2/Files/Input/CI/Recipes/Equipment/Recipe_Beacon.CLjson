@@ -1,0 +1,61 @@
+{
+	"JS_LibClass": "/Script/FactoryGame.FGRecipe",
+	"JS_LibOuter": "/Game/FactoryGame/Recipes/Equipment/Recipe_Beacon.Default__Recipe_Beacon_C",
+	"JS_LibValue":
+	{
+		"mDisplayNameOverride": false,
+		"mDisplayName": "Beacon",
+		"mIngredients":
+		{
+			"JS_InnerProperty": "mIngredients",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/IronPlate/Desc_IronPlate.Desc_IronPlate_C",
+					"Amount": 3
+				},
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/IronRod/Desc_IronRod.Desc_IronRod_C",
+					"Amount": 1
+				},
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C",
+					"Amount": 15
+				},
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C",
+					"Amount": 2
+				}
+			]
+		},
+		"mProduct":
+		{
+			"JS_InnerProperty": "mProduct",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Equipment/Beacon/BP_EquipmentDescriptorBeacon.BP_EquipmentDescriptorBeacon_C",
+					"Amount": 1
+				}
+			]
+		},
+		"mOverriddenCategory": "",
+		"mManufacturingMenuPriority": 0,
+		"mManufactoringDuration": 8,
+		"mManualManufacturingMultiplier": 1,
+		"mProducedIn":
+		{
+			"JS_InnerProperty": "mProducedIn",
+			"JS_Values": [
+				"/Game/FactoryGame/Buildable/-Shared/WorkBench/BP_WorkshopComponent.BP_WorkshopComponent_C",
+				"/Game/FactoryGame/Buildable/Factory/ManufacturerMk1/Build_ManufacturerMk1.Build_ManufacturerMk1_C"
+			]
+		},
+		"mMaterialCustomizationRecipe": "",
+		"mRelevantEvents":
+		{
+			"JS_InnerProperty": "mRelevantEvents",
+			"JS_Values": []
+		},
+		"mVariablePowerConsumptionConstant": 0,
+		"mVariablePowerConsumptionFactor": 1
+	}
+}

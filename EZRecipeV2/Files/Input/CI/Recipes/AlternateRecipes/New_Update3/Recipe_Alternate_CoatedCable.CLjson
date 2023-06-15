@@ -1,0 +1,52 @@
+{
+	"JS_LibClass": "/Script/FactoryGame.FGRecipe",
+	"JS_LibOuter": "/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CoatedCable.Default__Recipe_Alternate_CoatedCable_C",
+	"JS_LibValue":
+	{
+		"mDisplayNameOverride": true,
+		"mDisplayName": "Alternate: Coated Cable",
+		"mIngredients":
+		{
+			"JS_InnerProperty": "mIngredients",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/Wire/Desc_Wire.Desc_Wire_C",
+					"Amount": 5
+				},
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C",
+					"Amount": 2000
+				}
+			]
+		},
+		"mProduct":
+		{
+			"JS_InnerProperty": "mProduct",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/Cable/Desc_Cable.Desc_Cable_C",
+					"Amount": 9
+				}
+			]
+		},
+		"mOverriddenCategory": "/Game/FactoryGame/Resource/ItemCategories/Cat_Other.Cat_Other_C",
+		"mManufacturingMenuPriority": 0,
+		"mManufactoringDuration": 8,
+		"mManualManufacturingMultiplier": 1,
+		"mProducedIn":
+		{
+			"JS_InnerProperty": "mProducedIn",
+			"JS_Values": [
+				"/Game/FactoryGame/Buildable/Factory/OilRefinery/Build_OilRefinery.Build_OilRefinery_C"
+			]
+		},
+		"mMaterialCustomizationRecipe": "",
+		"mRelevantEvents":
+		{
+			"JS_InnerProperty": "mRelevantEvents",
+			"JS_Values": []
+		},
+		"mVariablePowerConsumptionConstant": 0,
+		"mVariablePowerConsumptionFactor": 1
+	}
+}

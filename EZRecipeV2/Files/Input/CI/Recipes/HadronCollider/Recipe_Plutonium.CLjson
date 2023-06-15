@@ -1,0 +1,52 @@
+{
+	"JS_LibClass": "/Script/FactoryGame.FGRecipe",
+	"JS_LibOuter": "/Game/FactoryGame/Recipes/HadronCollider/Recipe_Plutonium.Default__Recipe_Plutonium_C",
+	"JS_LibValue":
+	{
+		"mDisplayNameOverride": false,
+		"mDisplayName": "Dark Matter",
+		"mIngredients":
+		{
+			"JS_InnerProperty": "mIngredients",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/Non-FissibleUranium/Desc_NonFissibleUranium.Desc_NonFissibleUranium_C",
+					"Amount": 100
+				},
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/NuclearWaste/Desc_NuclearWaste.Desc_NuclearWaste_C",
+					"Amount": 25
+				}
+			]
+		},
+		"mProduct":
+		{
+			"JS_InnerProperty": "mProduct",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/PlutoniumPellet/Desc_PlutoniumPellet.Desc_PlutoniumPellet_C",
+					"Amount": 30
+				}
+			]
+		},
+		"mOverriddenCategory": "",
+		"mManufacturingMenuPriority": 0,
+		"mManufactoringDuration": 60,
+		"mManualManufacturingMultiplier": 1,
+		"mProducedIn":
+		{
+			"JS_InnerProperty": "mProducedIn",
+			"JS_Values": [
+				"/Game/FactoryGame/Buildable/Factory/HadronCollider/Build_HadronCollider.Build_HadronCollider_C"
+			]
+		},
+		"mMaterialCustomizationRecipe": "",
+		"mRelevantEvents":
+		{
+			"JS_InnerProperty": "mRelevantEvents",
+			"JS_Values": []
+		},
+		"mVariablePowerConsumptionConstant": 250,
+		"mVariablePowerConsumptionFactor": 500
+	}
+}

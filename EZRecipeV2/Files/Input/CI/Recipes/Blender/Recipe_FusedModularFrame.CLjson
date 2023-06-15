@@ -1,0 +1,56 @@
+{
+	"JS_LibClass": "/Script/FactoryGame.FGRecipe",
+	"JS_LibOuter": "/Game/FactoryGame/Recipes/Blender/Recipe_FusedModularFrame.Default__Recipe_FusedModularFrame_C",
+	"JS_LibValue":
+	{
+		"mDisplayNameOverride": false,
+		"mDisplayName": "Truck Chassis",
+		"mIngredients":
+		{
+			"JS_InnerProperty": "mIngredients",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/ModularFrameHeavy/Desc_ModularFrameHeavy.Desc_ModularFrameHeavy_C",
+					"Amount": 1
+				},
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/AluminumCasing/Desc_AluminumCasing.Desc_AluminumCasing_C",
+					"Amount": 50
+				},
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C",
+					"Amount": 25000
+				}
+			]
+		},
+		"mProduct":
+		{
+			"JS_InnerProperty": "mProduct",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/ModularFrameFused/Desc_ModularFrameFused.Desc_ModularFrameFused_C",
+					"Amount": 1
+				}
+			]
+		},
+		"mOverriddenCategory": "",
+		"mManufacturingMenuPriority": 3,
+		"mManufactoringDuration": 40,
+		"mManualManufacturingMultiplier": 1,
+		"mProducedIn":
+		{
+			"JS_InnerProperty": "mProducedIn",
+			"JS_Values": [
+				"/Game/FactoryGame/Buildable/Factory/Blender/Build_Blender.Build_Blender_C"
+			]
+		},
+		"mMaterialCustomizationRecipe": "",
+		"mRelevantEvents":
+		{
+			"JS_InnerProperty": "mRelevantEvents",
+			"JS_Values": []
+		},
+		"mVariablePowerConsumptionConstant": 0,
+		"mVariablePowerConsumptionFactor": 1
+	}
+}

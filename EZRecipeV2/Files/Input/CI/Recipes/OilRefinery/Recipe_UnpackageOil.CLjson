@@ -1,0 +1,52 @@
+{
+	"JS_LibClass": "/Script/FactoryGame.FGRecipe",
+	"JS_LibOuter": "/Game/FactoryGame/Recipes/OilRefinery/Recipe_UnpackageOil.Default__Recipe_UnpackageOil_C",
+	"JS_LibValue":
+	{
+		"mDisplayNameOverride": true,
+		"mDisplayName": "Unpackage Oil",
+		"mIngredients":
+		{
+			"JS_InnerProperty": "mIngredients",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_PackagedOil.Desc_PackagedOil_C",
+					"Amount": 2
+				}
+			]
+		},
+		"mProduct":
+		{
+			"JS_InnerProperty": "mProduct",
+			"JS_Values": [
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C",
+					"Amount": 2000
+				},
+				{
+					"ItemClass": "/Game/FactoryGame/Resource/Parts/FluidCanister/Desc_FluidCanister.Desc_FluidCanister_C",
+					"Amount": 2
+				}
+			]
+		},
+		"mOverriddenCategory": "",
+		"mManufacturingMenuPriority": 1,
+		"mManufactoringDuration": 2,
+		"mManualManufacturingMultiplier": 1,
+		"mProducedIn":
+		{
+			"JS_InnerProperty": "mProducedIn",
+			"JS_Values": [
+				"/Game/FactoryGame/Buildable/Factory/Packager/Build_Packager.Build_Packager_C"
+			]
+		},
+		"mMaterialCustomizationRecipe": "",
+		"mRelevantEvents":
+		{
+			"JS_InnerProperty": "mRelevantEvents",
+			"JS_Values": []
+		},
+		"mVariablePowerConsumptionConstant": 0,
+		"mVariablePowerConsumptionFactor": 1
+	}
+}
