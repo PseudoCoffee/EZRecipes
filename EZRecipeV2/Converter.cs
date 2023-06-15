@@ -66,7 +66,7 @@ namespace EZRecipesV2
 
 			try
 			{
-				string text = $"{recipe.ResourcePath}\n" +
+				string text = $"{recipe.ResourcePath}{Environment.NewLine}" +
 					JsonConvert.SerializeObject(
 					recipe,
 					Newtonsoft.Json.Formatting.Indented,
