@@ -1,23 +1,24 @@
-﻿using Newtonsoft.Json;
+﻿using Common.DX.FRM;
+using Newtonsoft.Json;
 
 namespace EZRecipes
 {
-	public static class Converter
+    public static class Converter
 	{
-		private static List<Input.RecipeGroup> GetRecipes(string filePath)
+		private static List<Common.Input.FRM.RecipeGroup> GetRecipes(string filePath)
 		{
 			string json = File.ReadAllText(filePath);
 
-			List<Input.RecipeGroup>? recipeGroups = JsonConvert.DeserializeObject<List<Input.RecipeGroup>>(json);
+			List<Common.Input.FRM.RecipeGroup>? recipeGroups = JsonConvert.DeserializeObject<List<Common.Input.FRM.RecipeGroup>>(json);
 
-			return recipeGroups ?? new List<Input.RecipeGroup>();
+			return recipeGroups ?? new List<Common.Input.FRM.RecipeGroup>();
 		}
 
-		private static IEnumerable<Output.Recipe> RecipeGroupsToRecipe(List<Input.RecipeGroup> recipeGroups)
+		private static IEnumerable<Common.Output.FRM.Recipe> RecipeGroupsToRecipe(List<Common.Input.FRM.RecipeGroup> recipeGroups)
 		{
-			foreach (Input.RecipeGroup recipeGroup in recipeGroups)
+			foreach (Common.Input.FRM.RecipeGroup recipeGroup in recipeGroups)
 			{
-				foreach (Output.Recipe recipe in DX.Recipe.From(recipeGroup.ClassName, recipeGroup.TechTier!.Value, recipeGroup.Recipes)
+				foreach (Common.Output.FRM.Recipe recipe in Recipe.From(recipeGroup.ClassName, recipeGroup.TechTier!.Value, recipeGroup.Recipes)
 					.Where(r => null != r)
 					.Select(r => r!))
 				{
@@ -26,9 +27,21 @@ namespace EZRecipes
 			}
 		}
 
-		private static bool WriteRecipeToFile(string outputFolder, Output.Recipe recipe)
+		private static bool WriteRecipeToFile(string outputFolder, Common.Output.FRM.Recipe recipe)
 		{
 			StreamWriter? writer = null;
+
+			string filePath = $"{outputFolder}\\{recipe.FileName}";
+			int? number = null;
+			string ending = "_EZFRM.json";
+
+			while (File.Exists(filePath + (number?.ToString() ?? "") + ending))
+			{
+				number = (number ?? -1) + 1;
+			}
+
+			filePath += (number?.ToString() ?? "") + ending;
+
 			try
 			{
 				string text = JsonConvert.SerializeObject(
@@ -39,12 +52,12 @@ namespace EZRecipes
 						NullValueHandling = NullValueHandling.Ignore
 					});
 
-				writer = new($"{outputFolder}\\{recipe.FileName}_EZ.json");
+				writer = new(filePath);
 				writer.Write(text);
 				writer.Close();
 				return true;
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
 				return false;
 			}
@@ -54,8 +67,11 @@ namespace EZRecipes
 			}
 		}
 
-		private static void WriteAllToFile(string outputFolder, List<Output.Recipe> recipes)
+		private static void WriteAllToFile(string outputFolder, List<Common.Output.FRM.Recipe> recipes)
 		{
+			Directory.Delete(outputFolder, true);
+			Directory.CreateDirectory(outputFolder);
+
 			int recipesWritten = 0;
 			foreach (var recipe in recipes)
 			{
@@ -69,9 +85,9 @@ namespace EZRecipes
 
 		public static void HandleFile(string inputPath, string outputFolder)
 		{
-			List<Input.RecipeGroup>? recipeGroups = GetRecipes(inputPath);
+			List<Common.Input.FRM.RecipeGroup>? recipeGroups = GetRecipes(inputPath);
 
-			List<Output.Recipe> recipes = RecipeGroupsToRecipe(recipeGroups).ToList();
+			List<Common.Output.FRM.Recipe> recipes = RecipeGroupsToRecipe(recipeGroups).ToList();
 
 			WriteAllToFile(outputFolder, recipes);
 		}

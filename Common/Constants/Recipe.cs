@@ -1,4 +1,4 @@
-﻿namespace EZRecipes.Constants
+﻿namespace Common.Constants
 {
 	public static class Recipe
 	{

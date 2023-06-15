@@ -1,6 +1,6 @@
-﻿namespace EZRecipes.Input
+﻿namespace Common.Input.FRM
 {
-    public class Ingredient
+    public class Product
     {
         public string? Name { get; set; }
 
@@ -11,5 +11,6 @@
         public double? ManualRate { get; set; }
 
         public double? FactoryRate { get; set; }
+
     }
 }

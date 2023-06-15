@@ -1,6 +1,6 @@
-﻿namespace EZRecipes.Input
+﻿namespace Common.Input.FRM
 {
-	public class RecipeGroup
+    public class RecipeGroup
     {
         public string? Name { get; set; }
 

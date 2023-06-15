@@ -2,7 +2,7 @@
   "profiles": {
     "EZRecipes": {
       "commandName": "Project",
-      "commandLineArgs": "\"Files\\Input\\FactoryGameRecipes.json\" \"Files\\Output\""
+      "commandLineArgs": "\"Files\\Input\\FRM\\FactoryGameRecipes.json\" \"Files\\Output\""
     }
   }
 }

@@ -12,11 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Files\Output\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Files\Input\FactoryGameRecipes.json">
+    <None Update="Files\Input\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

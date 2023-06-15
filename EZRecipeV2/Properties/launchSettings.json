@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EZRecipeV2": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Files\\Input\\CI\" \"Files\\Output\""
+    }
+  }
+}

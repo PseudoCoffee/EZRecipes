@@ -1,4 +1,4 @@
-﻿namespace EZRecipes.Input
+﻿namespace Common.Input.FRM
 {
     public class Recipe
     {
