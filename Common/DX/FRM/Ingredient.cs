@@ -7,7 +7,7 @@
             return new Output.FRM.Ingredient()
             {
                 Item = ingredient.ClassName,
-                Amount = (customQuantity ?? ingredient.Amount) * (Constants.Recipe.Fluids.Contains(ingredient.ClassName!) ? 1000 : 1)
+                Amount = (customQuantity ?? ingredient.Amount) * (Constants.FRM.Recipe.Fluids.Contains(ingredient.ClassName!) ? 1000 : 1)
             };
         }
 

@@ -15,6 +15,12 @@ namespace Common.Output.CI
 		[JsonIgnore]
 		public required string FileName { get; set; }
 
+		[JsonIgnore]
+		public int IngredientCount { get; set; }
+
+		[JsonIgnore]
+		public int ProductCount { get; set; }
+
 		public required List<Ingredient> Ingredients { get; set; }
 
 		public required List<Product> Products { get; set; }

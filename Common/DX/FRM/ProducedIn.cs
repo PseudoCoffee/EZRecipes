@@ -12,7 +12,7 @@
                 {
                     if (null != produced?.ProducedIn)
                     {
-                        if (Constants.Recipe.NameResolver.TryGetValue(produced.ProducedIn, out string? producedIn))
+                        if (Constants.FRM.Recipe.NameResolver.TryGetValue(produced.ProducedIn, out string? producedIn))
                         {
                             output.Add(producedIn);
                         }

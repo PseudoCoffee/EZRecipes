@@ -1,8 +1,8 @@
-﻿namespace Common.Constants
+﻿namespace Common.Constants.FRM
 {
 	public static class Recipe
 	{
-		public static List<string> Fluids = new List<string>
+		public static readonly List<string> Fluids = new()
 		{
 			"Desc_Water_C",
 			"Desc_LiquidOil_C",
@@ -16,7 +16,7 @@
 			"Desc_NitricAcid_C"
 		};
 
-		public static Dictionary<string, string> NameResolver = new Dictionary<string, string>
+		public static readonly Dictionary<string, string> NameResolver = new()
 		{
 			{ "Workbench", "Workbench" },
 			{ "Smelter", "Build_SmelterMk1" },

@@ -68,12 +68,12 @@ namespace EZRecipesV2
 			{
 				string text = $"{recipe.ResourcePath}{Environment.NewLine}" +
 					JsonConvert.SerializeObject(
-					recipe,
-					Newtonsoft.Json.Formatting.Indented,
-					new JsonSerializerSettings
-					{
-						NullValueHandling = NullValueHandling.Ignore
-					});
+						recipe,
+						Newtonsoft.Json.Formatting.Indented,
+						new JsonSerializerSettings
+						{
+							NullValueHandling = NullValueHandling.Ignore
+						});
 
 				writer = new(filePath);
 				writer.Write(text);
