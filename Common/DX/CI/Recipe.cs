@@ -1,6 +1,4 @@
-﻿using Common.DX.FRM;
-
-namespace Common.DX.CI
+﻿namespace Common.DX.CI
 {
 	public static class Recipe
 	{
@@ -11,11 +9,22 @@ namespace Common.DX.CI
 		{
 			HashSet<Tuple<int, int>> recipeCounts = new();
 
-			foreach (var producedIn in recipe.JS_LibValue.mProducedIn.JS_Values)
+			if (recipe.JS_LibValue.mProduct.JS_Values[0].ItemClass == Constants.CI.Recipes.Protein)
 			{
-				if (Constants.CI.Recipes.FactoryIngredientProductCount.TryGetValue(producedIn, out var parameters))
+				return new Tuple<int, int>(1, 2);
+			}
+			else if (recipe.JS_LibValue.mIngredients.JS_Values.Any(r => Constants.CI.Recipes.SlugIngredient.ContainsKey(r.ItemClass)))
+			{
+				return new Tuple<int, int>(1, Constants.CI.Recipes.SlugIngredient[recipe.JS_LibValue.mIngredients.JS_Values[0].ItemClass]);
+			}
+			else
+			{
+				foreach (var producedIn in recipe.JS_LibValue.mProducedIn.JS_Values)
 				{
-					recipeCounts.Add(parameters);
+					if (Constants.CI.Recipes.FactoryIngredientProductCount.TryGetValue(producedIn, out var parameters))
+					{
+						recipeCounts.Add(parameters);
+					}
 				}
 			}
 
@@ -61,7 +70,7 @@ namespace Common.DX.CI
 						ProductCount = recipeCounts.Item2,
 						Ingredients = ingredients.ToList(),
 						Products = products.ToList(),
-						ManufacturingDuration = GetManufacturingDuration(recipe) * (4f / 6f),
+						ManufacturingDuration = GetManufacturingDuration(recipe),
 						ManualManufacturingMultiplier = recipe.JS_LibValue?.mManualManufacturingMultiplier
 					};
 				}

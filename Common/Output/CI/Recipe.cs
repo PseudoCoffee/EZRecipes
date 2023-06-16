@@ -10,6 +10,7 @@ namespace Common.Output.CI
 		[JsonProperty("$schema")]
 		public static string Schema { get; set; } = "https://raw.githubusercontent.com/budak7273/ContentLib_Documentation/main/JsonSchemas/CL_Recipe.json";
 
+		[JsonIgnore]
 		public required string Name { get; set; }
 
 		[JsonIgnore]

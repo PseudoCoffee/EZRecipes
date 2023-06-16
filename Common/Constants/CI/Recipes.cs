@@ -31,6 +31,23 @@
 
 		#endregion
 
+		#region Slugs
+
+		public static readonly string BlueSlug = "/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal.Desc_Crystal_C";
+		public static readonly string YellowSlug = "/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal_mk2.Desc_Crystal_mk2_C";
+		public static readonly string PurpleSlug = "/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal_mk3.Desc_Crystal_mk3_C";
+
+		#endregion
+
+		public static readonly string Protein = "/Game/FactoryGame/Resource/Parts/AlienProtein/Desc_AlienProtein.Desc_AlienProtein_C";
+
+		public static readonly Dictionary<string, int> SlugIngredient = new()
+		{
+			{ BlueSlug, 1 },
+			{ YellowSlug, 2 },
+			{ PurpleSlug, 5 },
+		};
+
 		public static readonly List<string> Fluids = new()
 		{
 			Water, Oil, HeavyOilResidue, Fuel, Turbofuel, LiquidBiofuel, AluminaSolution, SulfuricAcid, Nitrogen, NitricAcid
@@ -64,64 +81,35 @@
 		{
 			{ Packager, 0.5 },
 
-			{ Constructor, 1.0 },
-			{ Smelter, 1.0 },
+			{ Constructor, 0.5 },
+			{ Smelter, 0.5 },
 
 			{ Assembler, 1.5 },
 			{ Foundry, 1.5 },
 
 			{ Blender, 2.0 },
 			{ ParticleAccelerator, 2 },
-			{ OilRefinery, 2},
+			{ OilRefinery, 1},
 
 			{ Manufacturer, 3 },
 		};
 
-		//public static readonly List<Tuple<string, double>> FactoryDuration = new()
-		//{
-		//	new Tuple<string, double> (Packager, 0.5 ),
-
-		//	new Tuple<string, double> (Constructor, 1.0 ),
-		//	new Tuple<string, double> (Smelter, 1.0 ),
-
-		//	new Tuple<string, double> (Assembler, 1.5 ),
-		//	new Tuple<string, double> (Foundry, 1.5 ),
-
-		//	new Tuple<string, double> (Blender, 2.0 ),
-		//	new Tuple<string, double> (ParticleAccelerator, 2 ),
-		//	new Tuple<string, double> (OilRefinery, 2),
-
-		//	new Tuple<string, double> (Manufacturer, 3 ),
-		//};
-
 		public static readonly Dictionary<string, Tuple<int, int>> FactoryIngredientProductCount = new()
 		{
-			{ Assembler, new Tuple<int, int>(4, 3) },
-			{ Blender, new Tuple<int, int>(4, 3) },
-			{ Constructor, new Tuple<int, int>(4, 4) },
-			{ Foundry, new Tuple<int, int>(4, 3) },
-			{ ParticleAccelerator, new Tuple<int, int>(4, 1) },
-			{ Manufacturer, new Tuple<int, int>(4, 2) },
-			{ OilRefinery, new Tuple<int, int>(4, 2) },
 			{ Packager, new Tuple<int, int>(1, 1) },
-			{ Smelter, new Tuple<int, int>(4, 4) },
+
+			{ Constructor, new Tuple<int, int>(2, 2) },
+			{ Smelter, new Tuple<int, int>(2, 2) },
+			
+			{ Assembler, new Tuple<int, int>(4, 3) },
+			{ Foundry, new Tuple<int, int>(4, 3) },
+			
+			{ Blender, new Tuple<int, int>(4, 3) },
+			{ ParticleAccelerator, new Tuple<int, int>(4, 1) },
+			{ OilRefinery, new Tuple<int, int>(2, 1) },
+			
+			{ Manufacturer, new Tuple<int, int>(4, 2) },
 		};
-
-		//public static readonly List<Tuple<string, Tuple<int, int>>> FactoryIngredientProductCount = new()
-		//{
-		//	new Tuple<string, Tuple<int, int>> (Packager, new Tuple<int, int>(1, 1)),
-		//	new Tuple<string, Tuple<int, int>> (Constructor, new Tuple<int, int>(4, 4)),
-		//	new Tuple<string, Tuple<int, int>> (Smelter, new Tuple<int, int>(4, 4)),
-
-		//	new Tuple<string, Tuple<int, int>> (Assembler, new Tuple<int, int>(4, 3)),
-		//	new Tuple<string, Tuple<int, int>> (Blender, new Tuple<int, int>(4, 3)),
-		//	new Tuple<string, Tuple<int, int>> (Foundry, new Tuple<int, int>(4, 3)),
-
-		//	new Tuple<string, Tuple<int, int>> (Manufacturer, new Tuple<int, int>(4, 2)),
-		//	new Tuple<string, Tuple<int, int>> (OilRefinery, new Tuple<int, int>(4, 2)),
-
-		//	new Tuple<string, Tuple<int, int>> (ParticleAccelerator, new Tuple<int, int>(4, 1)),
-		//};
 
 		public static readonly List<string> BlackListedFactories = new()
 		{
