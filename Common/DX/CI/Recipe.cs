@@ -1,43 +1,56 @@
-﻿namespace Common.DX.CI
+﻿using Common.Constants.CI;
+
+namespace Common.DX.CI
 {
-	public static class Recipe
+    public static class Recipe
 	{
 		public static readonly HashSet<string> Factories = new();
 		public static readonly HashSet<string> Fluids = new();
 
-		private static Tuple<int, int> GetRecipeCounts(Input.CI.Recipe recipe)
+		private static RecipeCount GetRecipeCounts(Input.CI.Recipe recipe, RecipeConfig recipeConfig)
 		{
-			HashSet<Tuple<int, int>> recipeCounts = new();
+			Input.CI.Ingredient[] ingredients = recipe.JS_LibValue.mIngredients.JS_Values;
+			Input.CI.Product[] products = recipe.JS_LibValue.mProduct.JS_Values;
 
-			if (recipe.JS_LibValue.mProduct.JS_Values[0].ItemClass == Constants.CI.Recipes.Protein)
+			HashSet<IngredientProduct> recipeCounts = new();
+
+			if (recipeConfig.CustomRecipeCount.ContainsKey(recipe.JS_LibOuter))
 			{
-				return new Tuple<int, int>(1, 2);
+				return recipeConfig.CustomRecipeCount[recipe.JS_LibOuter];
 			}
-			else if (recipe.JS_LibValue.mIngredients.JS_Values.Any(r => Constants.CI.Recipes.SlugIngredient.ContainsKey(r.ItemClass)))
+			else if (recipe.JS_LibValue.mProduct.JS_Values[0].ItemClass == recipeConfig.Protein)
 			{
-				return new Tuple<int, int>(1, Constants.CI.Recipes.SlugIngredient[recipe.JS_LibValue.mIngredients.JS_Values[0].ItemClass]);
+				var lists = Enumerable.Repeat(1, 10).ToList();
+
+				return new (1, ingredients.Length, 2, products.Length);
+			}
+			else if (recipe.JS_LibValue.mIngredients.JS_Values.Any(r => recipeConfig.SlugIngredientCount.ContainsKey(r.ItemClass)))
+			{
+				return new (1, ingredients.Length, recipeConfig.SlugIngredientCount[recipe.JS_LibValue.mIngredients.JS_Values[0].ItemClass], products.Length);
 			}
 			else
 			{
 				foreach (var producedIn in recipe.JS_LibValue.mProducedIn.JS_Values)
 				{
-					if (Constants.CI.Recipes.FactoryIngredientProductCount.TryGetValue(producedIn, out var parameters))
+					if (recipeConfig.FactoryIngredientProductCount.TryGetValue(producedIn, out var parameters))
 					{
 						recipeCounts.Add(parameters);
 					}
 				}
 			}
 
-			return recipeCounts.OrderBy(ip => ip.Item2 / (double)ip.Item1).First();
+			var bestRecipeCount = recipeCounts.OrderBy(ip => ip.Product / (double)ip.Ingredient).First();
+
+			return new (bestRecipeCount.Ingredient, ingredients.Length, bestRecipeCount.Product, products.Length);
 		}
 
-		private static double GetManufacturingDuration(Input.CI.Recipe recipe)
+		private static double GetManufacturingDuration(Input.CI.Recipe recipe, RecipeConfig recipeConfig)
 		{
 			var manufacturingDurations = new HashSet<double>();
 
 			foreach (var producedIn in recipe.JS_LibValue.mProducedIn.JS_Values)
 			{
-				if (Constants.CI.Recipes.FactoryDuration.TryGetValue(producedIn, out var duration))
+				if (recipeConfig.FactoryDuration.TryGetValue(producedIn, out var duration))
 				{
 					manufacturingDurations.Add(duration);
 				}
@@ -46,18 +59,18 @@
 			return manufacturingDurations.Any() ? manufacturingDurations.Min() : 1;
 		}
 
-		public static Output.CI.Recipe? From(Input.CI.Recipe recipe)
+		public static Output.CI.Recipe? From(Input.CI.Recipe recipe, RecipeConfig recipeConfig)
 		{
-			if (null == recipe.JS_LibValue.mProducedIn?.JS_Values || !recipe.JS_LibValue.mProducedIn.JS_Values.Any(Constants.CI.Recipes.WhiteListedFactories.Contains))
+			if (null == recipe.JS_LibValue.mProducedIn?.JS_Values || !recipe.JS_LibValue.mProducedIn.JS_Values.Any(recipeConfig.WhiteListedFactories.Contains))
 			{
 				return null;
 			}
 			else
 			{
-				Tuple<int, int> recipeCounts = GetRecipeCounts(recipe);
+				RecipeCount recipeCount = GetRecipeCounts(recipe, recipeConfig);
 
-				IEnumerable<Output.CI.Ingredient>? ingredients = null != recipe.JS_LibValue.mIngredients ? Ingredient.From(recipe.JS_LibValue.mIngredients, recipeCounts.Item1) : null;
-				IEnumerable<Output.CI.Product>? products = null != recipe.JS_LibValue.mProduct ? Product.From(recipe.JS_LibValue.mProduct, recipeCounts.Item2) : null;
+				IEnumerable<Output.CI.Ingredient>? ingredients = null != recipe.JS_LibValue.mIngredients ? Ingredient.From(recipeConfig, recipe, recipeCount) : null;
+				IEnumerable<Output.CI.Product>? products = null != recipe.JS_LibValue.mProduct ? Product.From(recipeConfig, recipe, recipeCount) : null;
 
 				if (null != ingredients && null != products)
 				{
@@ -66,11 +79,11 @@
 						ResourcePath = $"/{recipe.JS_LibOuter.Replace("Default__", "")}",
 						Name = $"{recipe.JS_LibValue.mDisplayName}",
 						FileName = recipe.JS_LibOuter[recipe.JS_LibOuter.LastIndexOf(".")..].Replace(".Default__", ""),
-						IngredientCount = recipeCounts.Item1,
-						ProductCount = recipeCounts.Item2,
+						IngredientCount = string.Join(", ", recipeCount.Inputs),
+						ProductCount = string.Join(", ", recipeCount.Outputs),
 						Ingredients = ingredients.ToList(),
 						Products = products.ToList(),
-						ManufacturingDuration = GetManufacturingDuration(recipe),
+						ManufacturingDuration = GetManufacturingDuration(recipe, recipeConfig),
 						ManualManufacturingMultiplier = recipe.JS_LibValue?.mManualManufacturingMultiplier
 					};
 				}

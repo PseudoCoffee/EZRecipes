@@ -1,26 +1,35 @@
-﻿namespace Common.DX.CI
+﻿using Common.Constants.CI;
+
+namespace Common.DX.CI
 {
-	public static class Product
+    public static class Product
 	{
-		public static Output.CI.Product From(Input.CI.Product product, int amount)
+		public static Output.CI.Product From(RecipeConfig recipeConfig, Input.CI.Product product, int count)
 		{
-			if (Constants.CI.Recipes.Fluids.Contains(product.ItemClass))
+			if (recipeConfig.Fluids.Contains(product.ItemClass))
 			{
-				amount *= 1000;
+				count *= 1000;
 			}
 
 			return new Output.CI.Product
 			{
 				Item = product.ItemClass,
-				Amount = amount
+				Amount = count
 			};
 		}
 
-		public static IEnumerable<Output.CI.Product> From(Input.CI.Mproducts products, int amount)
+		public static IEnumerable<Output.CI.Product> From(RecipeConfig recipeConfig, Input.CI.Recipe recipe, RecipeCount recipeCount)
 		{
-			foreach (var product in products.JS_Values)
+			var products = recipe.JS_LibValue.mProduct.JS_Values;
+
+			if (recipeCount.Outputs.Count != products.Length)
 			{
-				yield return From(product, amount);
+				throw new Exception("Custom recipe product count mismatch");
+			}
+
+			for (int i = 0; i < products.Length; i++)
+			{
+				yield return From(recipeConfig, products[i], recipeCount.Outputs[i]);
 			}
 		}
 	}

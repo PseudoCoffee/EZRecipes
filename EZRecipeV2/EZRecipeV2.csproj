@@ -1553,6 +1553,9 @@
     <None Update="Files\Input\CI\Recipes\Vehicle\Train\Recipe_Locomotive.CLjson">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Properties\recipeConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

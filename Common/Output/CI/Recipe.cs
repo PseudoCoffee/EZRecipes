@@ -17,10 +17,10 @@ namespace Common.Output.CI
 		public required string FileName { get; set; }
 
 		[JsonIgnore]
-		public int IngredientCount { get; set; }
+		public required string IngredientCount { get; set; }
 
 		[JsonIgnore]
-		public int ProductCount { get; set; }
+		public required string ProductCount { get; set; }
 
 		public required List<Ingredient> Ingredients { get; set; }
 

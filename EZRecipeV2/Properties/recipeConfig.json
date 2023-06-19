@@ -1,0 +1,184 @@
+{
+	"Protein": "/Game/FactoryGame/Resource/Parts/AlienProtein/Desc_AlienProtein.Desc_AlienProtein_C",
+	"SlugIngredientCount": {
+		"/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal.Desc_Crystal_C": 1,
+		"/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal_mk2.Desc_Crystal_mk2_C": 2,
+		"/Game/FactoryGame/Resource/Environment/Crystal/Desc_Crystal_mk3.Desc_Crystal_mk3_C": 5
+	},
+	"Fluids": [
+		"/Game/FactoryGame/Resource/RawResources/Water/Desc_Water.Desc_Water_C",
+		"/Game/FactoryGame/Resource/RawResources/CrudeOil/Desc_LiquidOil.Desc_LiquidOil_C",
+		"/Game/FactoryGame/Resource/Parts/HeavyOilResidue/Desc_HeavyOilResidue.Desc_HeavyOilResidue_C",
+		"/Game/FactoryGame/Resource/Parts/Fuel/Desc_LiquidFuel.Desc_LiquidFuel_C",
+		"/Game/FactoryGame/Resource/Parts/Turbofuel/Desc_LiquidTurboFuel.Desc_LiquidTurboFuel_C",
+		"/Game/FactoryGame/Resource/Parts/BioFuel/Desc_LiquidBiofuel.Desc_LiquidBiofuel_C",
+		"/Game/FactoryGame/Resource/Parts/Alumina/Desc_AluminaSolution.Desc_AluminaSolution_C",
+		"/Game/FactoryGame/Resource/Parts/SulfuricAcid/Desc_SulfuricAcid.Desc_SulfuricAcid_C",
+		"/Game/FactoryGame/Resource/RawResources/NitrogenGas/Desc_NitrogenGas.Desc_NitrogenGas_C",
+		"/Game/FactoryGame/Resource/Parts/NitricAcid/Desc_NitricAcid.Desc_NitricAcid_C"
+	],
+	"AllFactories": [
+		"/Game/FactoryGame/Buildable/-Shared/WorkBench/BP_WorkBenchComponent.BP_WorkBenchComponent_C",
+		"/Game/FactoryGame/Buildable/-Shared/WorkBench/BP_WorkshopComponent.BP_WorkshopComponent_C",
+		"/Game/FactoryGame/Buildable/Factory/AssemblerMk1/Build_AssemblerMk1.Build_AssemblerMk1_C",
+		"/Game/FactoryGame/Buildable/Factory/AutomatedWorkBench/Build_AutomatedWorkBench.Build_AutomatedWorkBench_C",
+		"/Game/FactoryGame/Buildable/Factory/Blender/Build_Blender.Build_Blender_C",
+		"/Game/FactoryGame/Buildable/Factory/ConstructorMk1/Build_ConstructorMk1.Build_ConstructorMk1_C",
+		"/Game/FactoryGame/Buildable/Factory/Converter/Build_Converter.Build_Converter_C",
+		"/Game/FactoryGame/Buildable/Factory/FoundryMk1/Build_FoundryMk1.Build_FoundryMk1_C",
+		"/Game/FactoryGame/Buildable/Factory/HadronCollider/Build_HadronCollider.Build_HadronCollider_C",
+		"/Game/FactoryGame/Buildable/Factory/ManufacturerMk1/Build_ManufacturerMk1.Build_ManufacturerMk1_C",
+		"/Game/FactoryGame/Buildable/Factory/OilRefinery/Build_OilRefinery.Build_OilRefinery_C",
+		"/Game/FactoryGame/Buildable/Factory/Packager/Build_Packager.Build_Packager_C",
+		"/Game/FactoryGame/Buildable/Factory/SmelterMk1/Build_SmelterMk1.Build_SmelterMk1_C",
+		"/Script/FactoryGame.FGBuildGun",
+		"/Script/FactoryGame.FGBuildableAutomatedWorkBench"
+	],
+	"WhiteListedFactories": [
+		"/Game/FactoryGame/Buildable/Factory/AssemblerMk1/Build_AssemblerMk1.Build_AssemblerMk1_C",
+		"/Game/FactoryGame/Buildable/Factory/Blender/Build_Blender.Build_Blender_C",
+		"/Game/FactoryGame/Buildable/Factory/ConstructorMk1/Build_ConstructorMk1.Build_ConstructorMk1_C",
+		"/Game/FactoryGame/Buildable/Factory/FoundryMk1/Build_FoundryMk1.Build_FoundryMk1_C",
+		"/Game/FactoryGame/Buildable/Factory/HadronCollider/Build_HadronCollider.Build_HadronCollider_C",
+		"/Game/FactoryGame/Buildable/Factory/ManufacturerMk1/Build_ManufacturerMk1.Build_ManufacturerMk1_C",
+		"/Game/FactoryGame/Buildable/Factory/OilRefinery/Build_OilRefinery.Build_OilRefinery_C",
+		"/Game/FactoryGame/Buildable/Factory/Packager/Build_Packager.Build_Packager_C",
+		"/Game/FactoryGame/Buildable/Factory/SmelterMk1/Build_SmelterMk1.Build_SmelterMk1_C"
+	],
+	"FactoryDuration": {
+		"/Game/FactoryGame/Buildable/Factory/Packager/Build_Packager.Build_Packager_C": 0.5,
+		"/Game/FactoryGame/Buildable/Factory/ConstructorMk1/Build_ConstructorMk1.Build_ConstructorMk1_C": 0.5,
+		"/Game/FactoryGame/Buildable/Factory/SmelterMk1/Build_SmelterMk1.Build_SmelterMk1_C": 0.5,
+		"/Game/FactoryGame/Buildable/Factory/AssemblerMk1/Build_AssemblerMk1.Build_AssemblerMk1_C": 1.5,
+		"/Game/FactoryGame/Buildable/Factory/FoundryMk1/Build_FoundryMk1.Build_FoundryMk1_C": 1.5,
+		"/Game/FactoryGame/Buildable/Factory/Blender/Build_Blender.Build_Blender_C": 2.0,
+		"/Game/FactoryGame/Buildable/Factory/OilRefinery/Build_OilRefinery.Build_OilRefinery_C": 2.0,
+		"/Game/FactoryGame/Buildable/Factory/HadronCollider/Build_HadronCollider.Build_HadronCollider_C": 2.0,
+		"/Game/FactoryGame/Buildable/Factory/ManufacturerMk1/Build_ManufacturerMk1.Build_ManufacturerMk1_C": 3.0
+	},
+	"CustomRecipeCount": {
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyOilResidue.Default__Recipe_Alternate_HeavyOilResidue_C": {
+			"Inputs": [
+				3
+			],
+			"Outputs": [
+				5,
+				2
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_TurboHeavyFuel.Default__Recipe_Alternate_TurboHeavyFuel_C":{
+			"Inputs":[ 
+				5,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolymerResin.Default__Recipe_Alternate_PolymerResin_C": {
+			"Inputs": [
+				5
+			],
+			"Outputs": [
+				9,
+				2
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCateriumIngot.Default__Recipe_Alternate_PureCateriumIngot_C":{
+			"Inputs":[ 
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCopperIngot.Default__Recipe_Alternate_PureCopperIngot_C":{
+			"Inputs":[ 
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureIronIngot.Default__Recipe_Alternate_PureIronIngot_C":{
+			"Inputs":[ 
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureQuartzCrystal.Default__Recipe_Alternate_PureQuartzCrystal_C":{
+			"Inputs":[ 
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualPlastic.Default__Recipe_ResidualPlastic_C":{
+			"Inputs":[ 
+				3,
+				1
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Default__Recipe_Alternate_WetConcrete_C":{
+			"Inputs":[ 
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		}
+	},
+	"FactoryIngredientProductCount": {
+		"/Game/FactoryGame/Buildable/Factory/Packager/Build_Packager.Build_Packager_C": {
+			"Ingredient": 1,
+			"Product": 1
+		},
+		"/Game/FactoryGame/Buildable/Factory/ConstructorMk1/Build_ConstructorMk1.Build_ConstructorMk1_C": {
+			"Ingredient": 2,
+			"Product": 2
+		},
+		"/Game/FactoryGame/Buildable/Factory/SmelterMk1/Build_SmelterMk1.Build_SmelterMk1_C": {
+			"Ingredient": 2,
+			"Product": 2
+		},
+		"/Game/FactoryGame/Buildable/Factory/AssemblerMk1/Build_AssemblerMk1.Build_AssemblerMk1_C": {
+			"Ingredient": 4,
+			"Product": 3
+		},
+		"/Game/FactoryGame/Buildable/Factory/FoundryMk1/Build_FoundryMk1.Build_FoundryMk1_C": {
+			"Ingredient": 4,
+			"Product": 3
+		},
+		"/Game/FactoryGame/Buildable/Factory/OilRefinery/Build_OilRefinery.Build_OilRefinery_C": {
+			"Ingredient": 4,
+			"Product": 2
+		},
+		"/Game/FactoryGame/Buildable/Factory/Blender/Build_Blender.Build_Blender_C": {
+			"Ingredient": 4,
+			"Product": 2
+		},
+		"/Game/FactoryGame/Buildable/Factory/ManufacturerMk1/Build_ManufacturerMk1.Build_ManufacturerMk1_C": {
+			"Ingredient": 4,
+			"Product": 2
+		},
+		"/Game/FactoryGame/Buildable/Factory/HadronCollider/Build_HadronCollider.Build_HadronCollider_C": {
+			"Ingredient": 4,
+			"Product": 1
+		}
+	},
+	"BlackListedFactories": [
+		"/Game/FactoryGame/Buildable/-Shared/WorkBench/BP_WorkshopComponent.BP_WorkshopComponent_C",
+		"/Script/FactoryGame.FGBuildGun"
+	]
+}

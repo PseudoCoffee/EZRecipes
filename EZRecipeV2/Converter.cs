@@ -1,14 +1,14 @@
-﻿using Newtonsoft.Json;
+﻿using Common.Constants.CI;
 
 namespace EZRecipesV2
 {
-	public static class Converter
+    public static class Converter
 	{
 		private static Common.Input.CI.Recipe ReadFile(string path)
 		{
 			string json = File.ReadAllText(path);
 
-			return JsonConvert.DeserializeObject<Common.Input.CI.Recipe>(json)!;
+			return Newtonsoft.Json.JsonConvert.DeserializeObject<Common.Input.CI.Recipe>(json)!;
 		}
 
 		private static IEnumerable<Common.Input.CI.Recipe> ReadFolder(string path)
@@ -32,11 +32,11 @@ namespace EZRecipesV2
 			}
 		}
 
-		private static IEnumerable<Common.Output.CI.Recipe> InRecipeToOutRecipe(List<Common.Input.CI.Recipe> recipes)
+		private static IEnumerable<Common.Output.CI.Recipe> InRecipeToOutRecipe(List<Common.Input.CI.Recipe> recipes, RecipeConfig recipeConfig)
 		{
 			foreach(var recipe in recipes)
 			{
-				var outRecipe = Common.DX.CI.Recipe.From(recipe);
+				Common.Output.CI.Recipe? outRecipe = Common.DX.CI.Recipe.From(recipe, recipeConfig);
 
 				if (outRecipe != null)
 				{
@@ -67,12 +67,12 @@ namespace EZRecipesV2
 			try
 			{
 				string text = $"{recipe.ResourcePath}{Environment.NewLine}" +
-					JsonConvert.SerializeObject(
+                    Newtonsoft.Json.JsonConvert.SerializeObject(
 						recipe,
 						Newtonsoft.Json.Formatting.Indented,
-						new JsonSerializerSettings
-						{
-							NullValueHandling = NullValueHandling.Ignore
+						new Newtonsoft.Json.JsonSerializerSettings
+                        {
+							NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
 						});
 
 				writer = new(filePath);
@@ -106,11 +106,13 @@ namespace EZRecipesV2
 			Console.WriteLine($"Written {recipesWritten} out of {recipes.Count} recipes to file.");
 		}
 
-		public static void HandleFile(string inputPath, string outputFolder)
+		public static void HandleFile(string inputPath, string outputFolder, string configFile)
 		{
 			List<Common.Input.CI.Recipe> inRecipes = ReadFolder(inputPath).ToList();
 
-			List<Common.Output.CI.Recipe> outRecipes = InRecipeToOutRecipe(inRecipes).ToList();
+			RecipeConfig recipeConfig = Newtonsoft.Json.JsonConvert.DeserializeObject<RecipeConfig>(File.ReadAllText(configFile))!;
+
+			List<Common.Output.CI.Recipe> outRecipes = InRecipeToOutRecipe(inRecipes, recipeConfig).ToList();
 
 			WriteAllToFile(outputFolder, outRecipes);
 		}
