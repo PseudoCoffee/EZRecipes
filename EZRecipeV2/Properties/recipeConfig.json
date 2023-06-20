@@ -66,8 +66,17 @@
 				2
 			]
 		},
-		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_TurboHeavyFuel.Default__Recipe_Alternate_TurboHeavyFuel_C":{
-			"Inputs":[ 
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_DilutedPackagedFuel.Default__Recipe_Alternate_DilutedPackagedFuel_C": {
+			"Inputs": [
+				2,
+				4
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_TurboHeavyFuel.Default__Recipe_Alternate_TurboHeavyFuel_C": {
+			"Inputs": [
 				5,
 				2
 			],
@@ -84,8 +93,8 @@
 				2
 			]
 		},
-		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCateriumIngot.Default__Recipe_Alternate_PureCateriumIngot_C":{
-			"Inputs":[ 
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCateriumIngot.Default__Recipe_Alternate_PureCateriumIngot_C": {
+			"Inputs": [
 				2,
 				2
 			],
@@ -93,8 +102,8 @@
 				4
 			]
 		},
-		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCopperIngot.Default__Recipe_Alternate_PureCopperIngot_C":{
-			"Inputs":[ 
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureCopperIngot.Default__Recipe_Alternate_PureCopperIngot_C": {
+			"Inputs": [
 				2,
 				2
 			],
@@ -102,8 +111,8 @@
 				4
 			]
 		},
-		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureIronIngot.Default__Recipe_Alternate_PureIronIngot_C":{
-			"Inputs":[ 
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureIronIngot.Default__Recipe_Alternate_PureIronIngot_C": {
+			"Inputs": [
 				2,
 				2
 			],
@@ -111,8 +120,8 @@
 				4
 			]
 		},
-		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureQuartzCrystal.Default__Recipe_Alternate_PureQuartzCrystal_C":{
-			"Inputs":[ 
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureQuartzCrystal.Default__Recipe_Alternate_PureQuartzCrystal_C": {
+			"Inputs": [
 				2,
 				2
 			],
@@ -120,8 +129,8 @@
 				4
 			]
 		},
-		"/Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualPlastic.Default__Recipe_ResidualPlastic_C":{
-			"Inputs":[ 
+		"/Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualPlastic.Default__Recipe_ResidualPlastic_C": {
+			"Inputs": [
 				3,
 				1
 			],
@@ -129,8 +138,17 @@
 				4
 			]
 		},
-		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Default__Recipe_Alternate_WetConcrete_C":{
-			"Inputs":[ 
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Default__Recipe_Alternate_WetConcrete_C": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Silica.Default__Recipe_Alternate_Silica_C": {
+			"Inputs": [
 				2,
 				2
 			],
