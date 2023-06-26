@@ -66,6 +66,24 @@
 				2
 			]
 		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EnrichedCoal.Default__Recipe_Alternate_EnrichedCoal_C": {
+			"Inputs": [
+				4,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Turbofuel.Default__Recipe_Alternate_Turbofuel_C": {
+			"Inputs": [
+				4,
+				3
+			],
+			"Outputs": [
+				3
+			]
+		},
 		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_DilutedPackagedFuel.Default__Recipe_Alternate_DilutedPackagedFuel_C": {
 			"Inputs": [
 				2,
@@ -120,6 +138,15 @@
 				4
 			]
 		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotSteel_1.Default__Recipe_Alternate_IngotSteel_1_C": {
+			"Inputs": [
+				2,
+				1
+			],
+			"Outputs": [
+				3
+			]
+		},
 		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PureQuartzCrystal.Default__Recipe_Alternate_PureQuartzCrystal_C": {
 			"Inputs": [
 				2,
@@ -133,6 +160,23 @@
 			"Inputs": [
 				3,
 				1
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/OilRefinery/Recipe_ResidualRubber.Default__Recipe_ResidualRubber_C": {
+			"Inputs": [
+				3,
+				1
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/OilRefinery/Recipe_PetroleumCoke.Default__Recipe_PetroleumCoke_C": {
+			"Inputs": [
+				2
 			],
 			"Outputs": [
 				4
@@ -154,6 +198,24 @@
 			],
 			"Outputs": [
 				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_IngotIron.Default__Recipe_Alternate_IngotIron_C": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				5
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_CopperAlloyIngot.Default__Recipe_Alternate_CopperAlloyIngot_C": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				5
 			]
 		}
 	},
