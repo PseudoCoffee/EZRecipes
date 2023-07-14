@@ -57,6 +57,53 @@
 		"/Game/FactoryGame/Buildable/Factory/ManufacturerMk1/Build_ManufacturerMk1.Build_ManufacturerMk1_C": 3.0
 	},
 	"CustomRecipeCount": {
+		"/Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminaSolution.Default__Recipe_AluminaSolution_C": {
+			"Inputs": [
+				6,
+				6
+			],
+			"Outputs": [
+				6,
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_ElectroAluminumScrap.Default__Recipe_Alternate_ElectroAluminumScrap_C": {
+			"Inputs": [
+				6,
+				2
+			],
+			"Outputs": [
+				12,
+				3
+			]
+		},
+		"/Game/FactoryGame/Recipes/Smelter/Recipe_IngotAluminum.Default__Recipe_IngotAluminum_C": {
+			"Inputs": [
+				6,
+				2
+			],
+			"Outputs": [
+				9
+			]
+		},
+		"/Game/FactoryGame/Recipes/Constructor/Recipe_AluminumSheet.Default__Recipe_AluminumSheet_C": {
+			"Inputs": [
+				4,
+				1
+			],
+			"Outputs": [
+				3
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_AlcladCasing.Default__Recipe_Alternate_AlcladCasing_C": {
+			"Inputs": [
+				4,
+				1
+			],
+			"Outputs": [
+				6
+			]
+		},
 		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_HeavyOilResidue.Default__Recipe_Alternate_HeavyOilResidue_C": {
 			"Inputs": [
 				3
@@ -64,6 +111,14 @@
 			"Outputs": [
 				5,
 				2
+			]
+		},
+		"/Game/FactoryGame/Recipes/OilRefinery/Recipe_PetroleumCoke.Default__Recipe_PetroleumCoke_C": {
+			"Inputs": [
+				4
+			],
+			"Outputs": [
+				8
 			]
 		},
 		"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EnrichedCoal.Default__Recipe_Alternate_EnrichedCoal_C": {
@@ -77,29 +132,38 @@
 		},
 		"/Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Turbofuel.Default__Recipe_Alternate_Turbofuel_C": {
 			"Inputs": [
-				4,
-				3
+				5,
+				1
 			],
 			"Outputs": [
-				3
+				5
 			]
 		},
 		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_DilutedPackagedFuel.Default__Recipe_Alternate_DilutedPackagedFuel_C": {
 			"Inputs": [
-				2,
-				4
+				4,
+				8
 			],
 			"Outputs": [
-				4
+				8
+			]
+		},
+		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_DilutedFuel.Default__Recipe_Alternate_DilutedFuel_C": {
+			"Inputs": [
+				5,
+				10
+			],
+			"Outputs": [
+				10
 			]
 		},
 		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_TurboHeavyFuel.Default__Recipe_Alternate_TurboHeavyFuel_C": {
 			"Inputs": [
-				5,
-				2
+				4,
+				1
 			],
 			"Outputs": [
-				4
+				5
 			]
 		},
 		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_PolymerResin.Default__Recipe_Alternate_PolymerResin_C": {
@@ -174,14 +238,6 @@
 				4
 			]
 		},
-		"/Game/FactoryGame/Recipes/OilRefinery/Recipe_PetroleumCoke.Default__Recipe_PetroleumCoke_C": {
-			"Inputs": [
-				2
-			],
-			"Outputs": [
-				4
-			]
-		},
 		"/Game/FactoryGame/Recipes/AlternateRecipes/New_Update3/Recipe_Alternate_WetConcrete.Default__Recipe_Alternate_WetConcrete_C": {
 			"Inputs": [
 				2,
@@ -221,8 +277,8 @@
 	},
 	"FactoryIngredientProductCount": {
 		"/Game/FactoryGame/Buildable/Factory/Packager/Build_Packager.Build_Packager_C": {
-			"Ingredient": 1,
-			"Product": 1
+			"Ingredient": 2,
+			"Product": 2
 		},
 		"/Game/FactoryGame/Buildable/Factory/ConstructorMk1/Build_ConstructorMk1.Build_ConstructorMk1_C": {
 			"Ingredient": 2,
