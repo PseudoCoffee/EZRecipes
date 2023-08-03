@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace EZRecipes
 {
-    public static class Converter
+	public static class Converter
 	{
 		private static List<Common.Input.FRM.RecipeGroup> GetRecipes(string filePath)
 		{
@@ -69,7 +69,10 @@ namespace EZRecipes
 
 		private static void WriteAllToFile(string outputFolder, List<Common.Output.FRM.Recipe> recipes)
 		{
-			Directory.Delete(outputFolder, true);
+			if (Directory.Exists(outputFolder))
+			{
+				Directory.Delete(outputFolder, true);
+			}
 			Directory.CreateDirectory(outputFolder);
 
 			int recipesWritten = 0;

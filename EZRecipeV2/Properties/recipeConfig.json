@@ -57,6 +57,26 @@
 		"/Game/FactoryGame/Buildable/Factory/ManufacturerMk1/Build_ManufacturerMk1.Build_ManufacturerMk1_C": 3.0
 	},
 	"CustomRecipeCount": {
+		"/Game/FactoryGame/Recipes/RawResources/Recipe_Sulfur.Default__Recipe_Sulfur_C": {
+			"Inputs": [
+				4,
+				4
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"/Game/FactoryGame/Recipes/Manufacturer/Recipe_Battery.Default__Recipe_Battery_C": {
+			"Inputs": [
+				4,
+				4,
+				4
+			],
+			"Outputs": [
+				2,
+				4
+			]
+		},
 		"/Game/FactoryGame/Recipes/OilRefinery/Recipe_AluminaSolution.Default__Recipe_AluminaSolution_C": {
 			"Inputs": [
 				6,
