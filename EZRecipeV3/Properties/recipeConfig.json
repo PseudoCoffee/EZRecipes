@@ -84,6 +84,12 @@
 		}
 	},
 	"CustomRecipeCount": {
+		"Recipe_QuantumEnergy": {
+			"Inputs": [],
+			"Outputs": [
+				12
+			]
+		},
 		"Recipe_FicsiteIngot_Iron": {
 			"Inputs": [
 				3,
