@@ -1,0 +1,32 @@
+//Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_Silica.Recipe_Alternate_Silica_C
+{
+"$schema": "https://github.com/budak7273/ContentLib_Documentation/blob/main/JsonSchemas/CL_Recipe.json",
+"Name": "Alternate: Cheap Silica",
+"Ingredients": [
+{
+      "Item": "Desc_RawQuartz",
+      "Amount": 2
+ },
+{
+      "Item": "Desc_Stone",
+      "Amount": 2
+ }
+],
+"Products": [
+{
+      "Item": "Desc_Silica",
+      "Amount": 4
+ }
+],
+"ManufacturingDuration": 1.5,
+"ProducedIn": ["Build_AssemblerMk1_C"],
+"OverrideCategory": "Cat_Minerals_C",
+"ManufacturingMenuPriority": 3.0,
+"UnlockedBy": ["Schematic_Alternate_Silica_C"],
+"ManualManufacturingMultiplier": 1.5,
+"VariablePowerConsumptionConstant": 0.0,
+"VariablePowerConsumptionFactor": 1.0,
+"ClearIngredients": true,
+"ClearProducts": true,
+"ClearBuilders": true
+}

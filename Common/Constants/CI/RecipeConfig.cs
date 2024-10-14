@@ -2,9 +2,11 @@
 {
 	public class RecipeCount
 	{
-		public List<int> Inputs { get; set; }
+		public IEnumerable<int> Inputs { get; set; }
 
-		public List<int> Outputs { get; set; }
+		public IEnumerable<int> Outputs { get; set; }
+
+		public double? CustomDuration { get; set; } = null;
 
 		public RecipeCount()
 		{
@@ -16,6 +18,12 @@
 		{
 			Inputs = Enumerable.Repeat(inputValue, inputCount).ToList();
 			Outputs = Enumerable.Repeat(outputValue, outputCount).ToList();
+		}
+
+		public RecipeCount(IEnumerable<int> inputs, IEnumerable<int> outputs)
+		{
+			Inputs = inputs;
+			Outputs = outputs;
 		}
 	}
 
@@ -46,6 +54,8 @@
 
 		public required Dictionary<string, double> FactoryDuration { get; set; }
 
+		public required Dictionary<string, GenericFactoryRecipe> CustomGenericFactoryRecipe { get; set; }
+		
 		public required Dictionary<string, RecipeCount> CustomRecipeCount { get; set; }
 
 		public required Dictionary<string, IngredientProduct> FactoryIngredientProductCount { get; set; }

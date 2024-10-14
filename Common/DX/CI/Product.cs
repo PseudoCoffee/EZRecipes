@@ -22,14 +22,14 @@ namespace Common.DX.CI
 		{
 			var products = recipe.JS_LibValue.mProduct.JS_Values;
 
-			if (recipeCount.Outputs.Count != products.Length)
+			if (recipeCount.Outputs.Count() != products.Length)
 			{
 				throw new Exception("Custom recipe product count mismatch");
 			}
 
 			for (int i = 0; i < products.Length; i++)
 			{
-				yield return From(recipeConfig, products[i], recipeCount.Outputs[i]);
+				yield return From(recipeConfig, products[i], recipeCount.Outputs.ElementAt(i));
 			}
 		}
 	}

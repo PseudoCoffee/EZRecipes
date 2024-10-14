@@ -1,0 +1,40 @@
+//Game/FactoryGame/Recipes/Manufacturer/Recipe_PlutoniumFuelRod.Recipe_PlutoniumFuelRod_C
+{
+"$schema": "https://github.com/budak7273/ContentLib_Documentation/blob/main/JsonSchemas/CL_Recipe.json",
+"Name": "Plutonium Fuel Rod",
+"Ingredients": [
+{
+      "Item": "Desc_PlutoniumCell",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_SteelPlate",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_ElectromagneticControlRod",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_AluminumPlateReinforced",
+      "Amount": 4
+ }
+],
+"Products": [
+{
+      "Item": "Desc_PlutoniumFuelRod",
+      "Amount": 2
+ }
+],
+"ManufacturingDuration": 3.0,
+"ProducedIn": ["Build_ManufacturerMk1_C"],
+"OverrideCategory": "Cat_Nuclear_C",
+"ManufacturingMenuPriority": 3.0,
+"UnlockedBy": ["Schematic_8-5_C"],
+"ManualManufacturingMultiplier": 3.0,
+"VariablePowerConsumptionConstant": 0.0,
+"VariablePowerConsumptionFactor": 1.0,
+"ClearIngredients": true,
+"ClearProducts": true,
+"ClearBuilders": true
+}

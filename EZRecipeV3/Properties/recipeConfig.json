@@ -1,0 +1,393 @@
+{
+	"Protein": "Desc_AlienProtein_C",
+	"SlugIngredientCount": {
+		"Desc_Crystal_C": 1,
+		"Desc_Crystal_mk2_C": 2,
+		"Desc_Crystal_mk3_C": 5
+	},
+	"Fluids": [
+		"Desc_QuantumEnergy_C",
+		"Desc_DarkEnergy_C",
+		"Desc_SulfuricAcid_C",
+		"Desc_HeavyOilResidue_C",
+		"Desc_NitrogenGas_C",
+		"Desc_LiquidOil_C",
+		"Desc_Water_C",
+		"Desc_LiquidFuel_C",
+		"Desc_AluminaSolution_C",
+		"Desc_NitricAcid_C",
+		"Desc_IonizedFuel_C",
+		"Desc_DissolvedSilica_C",
+		"Desc_RocketFuel_C",
+		"Desc_LiquidTurboFuel_C",
+		"Desc_LiquidBiofuel_C"
+	],
+	"AllFactories": [
+		"Build_AssemblerMk1_C",
+		"Build_Blender_C",
+		"Build_ConstructorMk1_C",
+		"Build_Converter_C",
+		"Build_FoundryMk1_C",
+		"Build_HadronCollider_C",
+		"Build_ManufacturerMk1_C",
+		"Build_OilRefinery_C",
+		"Build_Packager_C",
+		"Build_QuantumEncoder_C",
+		"Build_SmelterMk1_C",
+		"FGBuildableAutomatedWorkBench"
+	],
+	"WhiteListedFactories": [
+		"Build_AssemblerMk1_C",
+		"Build_Blender_C",
+		"Build_ConstructorMk1_C",
+		"Build_Converter_C",
+		"Build_FoundryMk1_C",
+		"Build_HadronCollider_C",
+		"Build_ManufacturerMk1_C",
+		"Build_OilRefinery_C",
+		"Build_Packager_C",
+		"Build_QuantumEncoder_C",
+		"Build_SmelterMk1_C"
+	],
+	"FactoryDuration": {
+		"Build_Packager_C": 0.5,
+		"Build_ConstructorMk1_C": 0.5,
+		"Build_SmelterMk1_C": 0.5,
+		"Build_AssemblerMk1_C": 1.5,
+		"Build_FoundryMk1_C": 1.5,
+		"Build_Blender_C": 2.0,
+		"Build_OilRefinery_C": 2.0,
+		"Build_HadronCollider_C": 2.0,
+		"Build_ManufacturerMk1_C": 3.0,
+		"Build_QuantumEncoder_C": 3.0,
+		"Build_Converter_C": 4.0
+	},
+	"CustomGenericFactoryRecipe": {
+		"Build_Converter_C": {
+			"CustomDuration": 1,
+			"Ingredients": [
+				{
+					"Item": "Desc_SAMIngot_C",
+					"Amount": 1
+				},
+				{
+					"Item": "*",
+					"Amount": 6
+				}
+			],
+			"Products": [
+				{
+					"Item": "*",
+					"Amount": 4
+				}
+			]
+		}
+	},
+	"CustomRecipeCount": {
+		"Recipe_FicsiteIngot_Iron": {
+			"Inputs": [
+				3,
+				12
+			],
+			"Outputs": [
+				2
+			]
+		},
+		"Recipe_FicsiteIngot_CAT": {
+			"Inputs": [
+				3,
+				6
+			],
+			"Outputs": [
+				2
+			]
+		},
+		"Recipe_Sulfur": {
+			"Inputs": [
+				4,
+				4
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_Battery": {
+			"Inputs": [
+				4,
+				4,
+				4
+			],
+			"Outputs": [
+				2,
+				4
+			]
+		},
+		"Recipe_AluminaSolution": {
+			"Inputs": [
+				6,
+				6
+			],
+			"Outputs": [
+				6,
+				4
+			]
+		},
+		"Recipe_Alternate_ElectroAluminumScrap": {
+			"Inputs": [
+				6,
+				2
+			],
+			"Outputs": [
+				12,
+				3
+			]
+		},
+		"Recipe_IngotAluminum": {
+			"Inputs": [
+				6,
+				2
+			],
+			"Outputs": [
+				9
+			]
+		},
+		"Recipe_AluminumSheet": {
+			"Inputs": [
+				4,
+				1
+			],
+			"Outputs": [
+				3
+			]
+		},
+		"Recipe_Alternate_AlcladCasing": {
+			"Inputs": [
+				4,
+				1
+			],
+			"Outputs": [
+				6
+			]
+		},
+		"Recipe_Alternate_HeavyOilResidue": {
+			"Inputs": [
+				3
+			],
+			"Outputs": [
+				5,
+				2
+			]
+		},
+		"Recipe_PetroleumCoke": {
+			"Inputs": [
+				4
+			],
+			"Outputs": [
+				8
+			]
+		},
+		"Recipe_Alternate_EnrichedCoal": {
+			"Inputs": [
+				4,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_Alternate_Turbofuel": {
+			"Inputs": [
+				5,
+				1
+			],
+			"Outputs": [
+				5
+			]
+		},
+		"Recipe_Alternate_DilutedPackagedFuel": {
+			"Inputs": [
+				4,
+				8
+			],
+			"Outputs": [
+				8
+			]
+		},
+		"Recipe_Alternate_DilutedFuel": {
+			"Inputs": [
+				5,
+				10
+			],
+			"Outputs": [
+				10
+			]
+		},
+		"Recipe_Alternate_TurboHeavyFuel": {
+			"Inputs": [
+				4,
+				1
+			],
+			"Outputs": [
+				5
+			]
+		},
+		"Recipe_Alternate_PolymerResin": {
+			"Inputs": [
+				5
+			],
+			"Outputs": [
+				9,
+				2
+			]
+		},
+		"Recipe_Alternate_PureCateriumIngot": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_Alternate_PureCopperIngot": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_Alternate_PureIronIngot": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_Alternate_IngotSteel_1": {
+			"Inputs": [
+				2,
+				1
+			],
+			"Outputs": [
+				3
+			]
+		},
+		"Recipe_Alternate_PureQuartzCrystal": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_ResidualPlastic": {
+			"Inputs": [
+				3,
+				1
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_ResidualRubber": {
+			"Inputs": [
+				3,
+				1
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_Alternate_WetConcrete": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_Alternate_Silica": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				4
+			]
+		},
+		"Recipe_Alternate_IngotIron": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				5
+			]
+		},
+		"Recipe_Alternate_CopperAlloyIngot": {
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				5
+			]
+		}
+	},
+	"FactoryIngredientProductCount": {
+		"Build_Packager_C": {
+			"Ingredient": 2,
+			"Product": 2
+		},
+		"Build_ConstructorMk1_C": {
+			"Ingredient": 2,
+			"Product": 2
+		},
+		"Build_SmelterMk1_C": {
+			"Ingredient": 2,
+			"Product": 2
+		},
+		"Build_AssemblerMk1_C": {
+			"Ingredient": 4,
+			"Product": 3
+		},
+		"Build_FoundryMk1_C": {
+			"Ingredient": 4,
+			"Product": 3
+		},
+		"Build_OilRefinery_C": {
+			"Ingredient": 4,
+			"Product": 2
+		},
+		"Build_Blender_C": {
+			"Ingredient": 4,
+			"Product": 2
+		},
+		"Build_ManufacturerMk1_C": {
+			"Ingredient": 4,
+			"Product": 2
+		},
+		"Build_HadronCollider_C": {
+			"Ingredient": 4,
+			"Product": 1
+		},
+		"Build_QuantumEncoder_C": {
+			"Ingredient": 4,
+			"Product": 1
+		},
+		"Build_Converter_C": {
+			"Ingredient": 3,
+			"Product": 2
+		}
+	},
+	"BlackListedFactories": [
+		"FGBuildableAutomatedWorkBench",
+		"FactoryGame.FGBuildGun"
+	]
+}

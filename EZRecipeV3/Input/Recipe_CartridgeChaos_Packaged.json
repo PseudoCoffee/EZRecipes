@@ -1,0 +1,36 @@
+//Game/FactoryGame/Equipment/Rifle/Ammo/Recipe_CartridgeChaos_Packaged.Recipe_CartridgeChaos_Packaged_C
+{
+"$schema": "https://github.com/budak7273/ContentLib_Documentation/blob/main/JsonSchemas/CL_Recipe.json",
+"Name": "Turbo Rifle Ammo",
+"Ingredients": [
+{
+      "Item": "Desc_CartridgeStandard",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_AluminumCasing",
+      "Amount": 2
+ },
+{
+      "Item": "Desc_TurboFuel",
+      "Amount": 2
+ }
+],
+"Products": [
+{
+      "Item": "Desc_CartridgeChaos",
+      "Amount": 4
+ }
+],
+"ManufacturingDuration": 3.0,
+"ProducedIn": ["Build_ManufacturerMk1_C"],
+"OverrideCategory": "Cat_Ammunition_C",
+"ManufacturingMenuPriority": 303.0,
+"UnlockedBy": ["Research_Sulfur_5_2_Hidden_C"],
+"ManualManufacturingMultiplier": 9.999999,
+"VariablePowerConsumptionConstant": 0.0,
+"VariablePowerConsumptionFactor": 1.0,
+"ClearIngredients": true,
+"ClearProducts": true,
+"ClearBuilders": false
+}

@@ -1,0 +1,40 @@
+//Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_NuclearFuelRod_1.Recipe_Alternate_NuclearFuelRod_1_C
+{
+"$schema": "https://github.com/budak7273/ContentLib_Documentation/blob/main/JsonSchemas/CL_Recipe.json",
+"Name": "Alternate: Uranium Fuel Unit",
+"Ingredients": [
+{
+      "Item": "Desc_UraniumCell",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_ElectromagneticControlRod",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_CrystalOscillator",
+      "Amount": 4
+ },
+{
+      "Item": "BP_EquipmentDescriptorBeacon",
+      "Amount": 4
+ }
+],
+"Products": [
+{
+      "Item": "Desc_NuclearFuelRod",
+      "Amount": 2
+ }
+],
+"ManufacturingDuration": 3.0,
+"ProducedIn": ["Build_ManufacturerMk1_C"],
+"OverrideCategory": "Cat_Nuclear_C",
+"ManufacturingMenuPriority": 2.0,
+"UnlockedBy": ["Schematic_Alternate_NuclearFuelRod1_C"],
+"ManualManufacturingMultiplier": 3.0,
+"VariablePowerConsumptionConstant": 0.0,
+"VariablePowerConsumptionFactor": 1.0,
+"ClearIngredients": true,
+"ClearProducts": true,
+"ClearBuilders": true
+}

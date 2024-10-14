@@ -1,0 +1,32 @@
+//Game/FactoryGame/Recipes/AlternateRecipes/Parts/Recipe_Alternate_EnrichedCoal.Recipe_Alternate_EnrichedCoal_C
+{
+"$schema": "https://github.com/budak7273/ContentLib_Documentation/blob/main/JsonSchemas/CL_Recipe.json",
+"Name": "Alternate: Compacted Coal",
+"Ingredients": [
+{
+      "Item": "Desc_Coal",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_Sulfur",
+      "Amount": 2
+ }
+],
+"Products": [
+{
+      "Item": "Desc_CompactedCoal",
+      "Amount": 4
+ }
+],
+"ManufacturingDuration": 1.5,
+"ProducedIn": ["Build_AssemblerMk1_C"],
+"OverrideCategory": "Cat_Minerals_C",
+"ManufacturingMenuPriority": 2.0,
+"UnlockedBy": ["Schematic_Alternate_EnrichedCoal_C"],
+"ManualManufacturingMultiplier": 1.5,
+"VariablePowerConsumptionConstant": 0.0,
+"VariablePowerConsumptionFactor": 1.0,
+"ClearIngredients": true,
+"ClearProducts": true,
+"ClearBuilders": true
+}

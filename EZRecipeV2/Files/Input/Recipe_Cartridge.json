@@ -1,0 +1,32 @@
+//Game/FactoryGame/Recipes/Equipment/Recipe_Cartridge.Recipe_Cartridge_C
+{
+"$schema": "https://github.com/budak7273/ContentLib_Documentation/blob/main/JsonSchemas/CL_Recipe.json",
+"Name": "Rifle Ammo",
+"Ingredients": [
+{
+      "Item": "Desc_CopperSheet",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_GunpowderMK2",
+      "Amount": 4
+ }
+],
+"Products": [
+{
+      "Item": "Desc_CartridgeStandard",
+      "Amount": 8
+ }
+],
+"ManufacturingDuration": 1.5,
+"ProducedIn": ["Build_AssemblerMk1_C"],
+"OverrideCategory": "Cat_Ammunition_C",
+"ManufacturingMenuPriority": 301.0,
+"UnlockedBy": ["Research_Sulfur_4_1_C"],
+"ManualManufacturingMultiplier": 1.5,
+"VariablePowerConsumptionConstant": 0.0,
+"VariablePowerConsumptionFactor": 1.0,
+"ClearIngredients": true,
+"ClearProducts": true,
+"ClearBuilders": false
+}

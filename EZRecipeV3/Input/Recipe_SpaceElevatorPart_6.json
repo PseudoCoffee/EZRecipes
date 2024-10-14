@@ -1,0 +1,36 @@
+//Game/FactoryGame/Recipes/SpaceElevatorParts/Recipe_SpaceElevatorPart_6.Recipe_SpaceElevatorPart_6_C
+{
+"$schema": "https://github.com/budak7273/ContentLib_Documentation/blob/main/JsonSchemas/CL_Recipe.json",
+"Name": "Magnetic Field Generator",
+"Ingredients": [
+{
+      "Item": "Desc_SpaceElevatorPart_2",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_ElectromagneticControlRod",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_Battery",
+      "Amount": 4
+ }
+],
+"Products": [
+{
+      "Item": "Desc_SpaceElevatorPart_6",
+      "Amount": 2
+ }
+],
+"ManufacturingDuration": 3.0,
+"ProducedIn": ["Build_AssemblerMk1_C"],
+"OverrideCategory": "Cat_SpaceElevator_C",
+"ManufacturingMenuPriority": 5.0,
+"UnlockedBy": ["Schematic_8-1_C"],
+"ManualManufacturingMultiplier": 3.0,
+"VariablePowerConsumptionConstant": 0.0,
+"VariablePowerConsumptionFactor": 1.0,
+"ClearIngredients": true,
+"ClearProducts": true,
+"ClearBuilders": true
+}

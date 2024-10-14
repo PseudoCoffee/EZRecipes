@@ -1,0 +1,40 @@
+//Game/FactoryGame/Recipes/AlternateRecipes/New_Update4/Recipe_Alternate_ClassicBattery.Recipe_Alternate_ClassicBattery_C
+{
+"$schema": "https://github.com/budak7273/ContentLib_Documentation/blob/main/JsonSchemas/CL_Recipe.json",
+"Name": "Alternate: Classic Battery",
+"Ingredients": [
+{
+      "Item": "Desc_Sulfur",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_AluminumPlate",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_Plastic",
+      "Amount": 4
+ },
+{
+      "Item": "Desc_Wire",
+      "Amount": 4
+ }
+],
+"Products": [
+{
+      "Item": "Desc_Battery",
+      "Amount": 2
+ }
+],
+"ManufacturingDuration": 3.0,
+"ProducedIn": ["Build_ManufacturerMk1_C"],
+"OverrideCategory": "Cat_IndustrialParts_C",
+"ManufacturingMenuPriority": 11.0,
+"UnlockedBy": ["Schematic_Alternate_ClassicBattery_C"],
+"ManualManufacturingMultiplier": 3.0,
+"VariablePowerConsumptionConstant": 0.0,
+"VariablePowerConsumptionFactor": 1.0,
+"ClearIngredients": true,
+"ClearProducts": true,
+"ClearBuilders": true
+}
