@@ -119,7 +119,7 @@
 		},
 		"Recipe_Battery": {
 			"Inputs": [
-				4,
+				2,
 				4,
 				4
 			],
