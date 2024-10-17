@@ -121,7 +121,7 @@
 			"Inputs": [
 				2,
 				4,
-				4
+				3
 			],
 			"Outputs": [
 				2,
@@ -368,7 +368,7 @@
 			"Product": 3
 		},
 		"Build_OilRefinery_C": {
-			"Ingredient": 4,
+			"Ingredient": 3,
 			"Product": 2
 		},
 		"Build_Blender_C": {
@@ -380,12 +380,12 @@
 			"Product": 2
 		},
 		"Build_HadronCollider_C": {
-			"Ingredient": 4,
-			"Product": 1
+			"Ingredient": 5,
+			"Product": 2
 		},
 		"Build_QuantumEncoder_C": {
-			"Ingredient": 4,
-			"Product": 1
+			"Ingredient": 6,
+			"Product": 2
 		},
 		"Build_Converter_C": {
 			"Ingredient": 3,
