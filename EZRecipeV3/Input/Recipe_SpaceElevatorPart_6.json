@@ -10,10 +10,6 @@
 {
       "Item": "Desc_ElectromagneticControlRod",
       "Amount": 4
- },
-{
-      "Item": "Desc_Battery",
-      "Amount": 4
  }
 ],
 "Products": [
