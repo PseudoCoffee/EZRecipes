@@ -115,8 +115,17 @@
 		},
 		"Recipe_Alternate_Diamond_Pink": {
 			"Inputs": [
-				15,
-				60
+				10,
+				15
+			],
+			"Outputs": [
+				10
+			]
+		},
+		"Recipe_DarkMatter": {
+			"Inputs": [
+				5,
+				20
 			],
 			"Outputs": [
 				10
