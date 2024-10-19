@@ -62,7 +62,7 @@ namespace EZRecipeV3
 						.OrderBy(gfr => gfr.Products.Max(p => p.Amount) / (double)gfr.Ingredients.Max(i => i.Amount))
 						.First();
 
-					recipeCount = new RecipeCount(bestCandidate.Ingredients.Select(i => i.Amount), bestCandidate.Products.Select(p => p.Amount));
+					recipeCount = new RecipeCount(bestCandidate.Ingredients.Select(i => i.Amount), bestCandidate.Products.Select(p => p.Amount), bestCandidate.CustomDuration);
 					return true;
 				}
 			}
@@ -121,6 +121,21 @@ namespace EZRecipeV3
 			return manufacturingDurations.Any() ? manufacturingDurations.Min() : recipe.ManufacturingDuration;
 		}
 
+		private static FactoryVariablePower? GetVariablePowerComsumption(Recipe_v3 recipe, RecipeConfig recipeConfig)
+		{
+			var variablePowerConsumptions = new HashSet<FactoryVariablePower>();
+
+			foreach (var producedIn in recipe.ProducedIn!)
+			{
+				if (recipeConfig.FactoryVariablePower.TryGetValue(producedIn, out var factoryVariablePower))
+				{
+					variablePowerConsumptions.Add(factoryVariablePower);
+				}
+			}
+
+			return variablePowerConsumptions.Any() ? variablePowerConsumptions.MaxBy(vpc => vpc.VariablePowerConsumptionConstant_Multiplier + vpc.VariablePowerConsumptionFactor_Multiplier) : null;
+		}
+
 		public static Recipe_v3? Modify(Recipe_v3 recipe, RecipeConfig recipeConfig)
 		{
 			if (null == recipe.ProducedIn || !recipe.ProducedIn.Any(recipeConfig.WhiteListedFactories.Contains))
@@ -134,6 +149,8 @@ namespace EZRecipeV3
 				IEnumerable<Recipe_v3.Ingredient>? ingredients = IngredientModifier.ModifyIngredients(recipeConfig, recipe, recipeCount);
 				IEnumerable<Recipe_v3.Product>? products = ProductModifier.ModifyProducts(recipeConfig, recipe, recipeCount);
 
+				FactoryVariablePower? factoryVariablePower = GetVariablePowerComsumption(recipe, recipeConfig);
+
 				if (null != ingredients && null != products)
 				{
 					return new Recipe_v3
@@ -143,7 +160,9 @@ namespace EZRecipeV3
 						Ingredients = ingredients.ToArray(),
 						Products = products.ToArray(),
 						ManufacturingDuration = recipeCount.CustomDuration ?? GetManufacturingDuration(recipe, recipeConfig),
-						ManualManufacturingMultiplier = recipe.ManualManufacturingMultiplier
+						ManualManufacturingMultiplier = recipe.ManualManufacturingMultiplier,
+						VariablePowerConsumptionConstant = recipe.VariablePowerConsumptionConstant * factoryVariablePower?.VariablePowerConsumptionConstant_Multiplier,
+						VariablePowerConsumptionFactor = recipe.VariablePowerConsumptionFactor * factoryVariablePower?.VariablePowerConsumptionFactor_Multiplier
 					};
 				}
 				else

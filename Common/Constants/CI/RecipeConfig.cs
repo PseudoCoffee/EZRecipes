@@ -14,16 +14,18 @@
 			Outputs = new List<int>();
 		}
 
-		public RecipeCount(int inputValue, int inputCount, int outputValue, int outputCount)
+		public RecipeCount(int inputValue, int inputCount, int outputValue, int outputCount, double? customDuration = null)
 		{
 			Inputs = Enumerable.Repeat(inputValue, inputCount).ToList();
 			Outputs = Enumerable.Repeat(outputValue, outputCount).ToList();
+			CustomDuration = customDuration;
 		}
 
-		public RecipeCount(IEnumerable<int> inputs, IEnumerable<int> outputs)
+		public RecipeCount(IEnumerable<int> inputs, IEnumerable<int> outputs, double? customDuration = null)
 		{
 			Inputs = inputs;
 			Outputs = outputs;
+			CustomDuration = customDuration;
 		}
 	}
 
@@ -53,6 +55,8 @@
 		public required List<string> WhiteListedFactories { get; set; }
 
 		public required Dictionary<string, double> FactoryDuration { get; set; }
+
+		public required Dictionary<string, FactoryVariablePower> FactoryVariablePower { get; set; }
 
 		public required Dictionary<string, GenericFactoryRecipe> CustomGenericFactoryRecipe { get; set; }
 		

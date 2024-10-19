@@ -57,14 +57,28 @@
 		"Build_FoundryMk1_C": 1.5,
 		"Build_Blender_C": 2.0,
 		"Build_OilRefinery_C": 2.0,
-		"Build_HadronCollider_C": 2.0,
+		"Build_HadronCollider_C": 10.0,
 		"Build_ManufacturerMk1_C": 3.0,
-		"Build_QuantumEncoder_C": 3.0,
-		"Build_Converter_C": 4.0
+		"Build_QuantumEncoder_C": 15.0,
+		"Build_Converter_C": 20.0
+	},
+	"FactoryVariablePower": {
+		"Build_HadronCollider_C": {
+			"VariablePowerConsumptionConstant_Multiplier": 5,
+			"VariablePowerConsumptionFactor_Multiplier": 5
+		},
+		"Build_QuantumEncoder_C": {
+			"VariablePowerConsumptionConstant_Multiplier": 5,
+			"VariablePowerConsumptionFactor_Multiplier": 5
+		},
+		"Build_Converter_C": {
+			"VariablePowerConsumptionConstant_Multiplier": 5,
+			"VariablePowerConsumptionFactor_Multiplier": 5
+		}
 	},
 	"CustomGenericFactoryRecipe": {
 		"Build_Converter_C": {
-			"CustomDuration": 1,
+			"CustomDuration": 2,
 			"Ingredients": [
 				{
 					"Item": "Desc_SAMIngot_C",
@@ -90,22 +104,40 @@
 				12
 			]
 		},
-		"Recipe_FicsiteIngot_Iron": {
+		"Recipe_SpaceElevatorPart_9": {
 			"Inputs": [
-				3,
-				12
+				80,
+				10
 			],
 			"Outputs": [
-				2
+				10
+			]
+		},
+		"Recipe_Alternate_Diamond_Pink": {
+			"Inputs": [
+				15,
+				60
+			],
+			"Outputs": [
+				10
+			]
+		},
+		"Recipe_FicsiteIngot_Iron": {
+			"Inputs": [
+				15,
+				60
+			],
+			"Outputs": [
+				10
 			]
 		},
 		"Recipe_FicsiteIngot_CAT": {
 			"Inputs": [
-				3,
-				6
+				15,
+				30
 			],
 			"Outputs": [
-				2
+				10
 			]
 		},
 		"Recipe_Sulfur": {
@@ -121,11 +153,11 @@
 			"Inputs": [
 				2,
 				4,
-				3
+				4
 			],
 			"Outputs": [
 				2,
-				4
+				3
 			]
 		},
 		"Recipe_AluminaSolution": {
@@ -190,6 +222,14 @@
 			],
 			"Outputs": [
 				8
+			]
+		},
+		"Recipe_CopperDust": {
+			"Inputs": [
+				1
+			],
+			"Outputs": [
+				3
 			]
 		},
 		"Recipe_Alternate_EnrichedCoal": {
@@ -380,16 +420,16 @@
 			"Product": 2
 		},
 		"Build_HadronCollider_C": {
-			"Ingredient": 5,
-			"Product": 2
+			"Ingredient": 25,
+			"Product": 10
 		},
 		"Build_QuantumEncoder_C": {
-			"Ingredient": 6,
-			"Product": 2
+			"Ingredient": 30,
+			"Product": 10
 		},
 		"Build_Converter_C": {
-			"Ingredient": 3,
-			"Product": 2
+			"Ingredient": 15,
+			"Product": 10
 		}
 	},
 	"BlackListedFactories": [
