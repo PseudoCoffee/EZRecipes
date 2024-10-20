@@ -99,9 +99,10 @@
 	},
 	"CustomRecipeCount": {
 		"Recipe_QuantumEnergy": {
+			"CustomDuration": 2,
 			"Inputs": [],
 			"Outputs": [
-				12
+				10
 			]
 		},
 		"Recipe_SpaceElevatorPart_9": {
@@ -122,6 +123,23 @@
 				10
 			]
 		},
+		"Recipe_Alternate_Diamond_Turbo": {
+			"Inputs": [
+				20,
+				10
+			],
+			"Outputs": [
+				20
+			]
+		},
+		"Recipe_DarkEnergy": {
+			"Inputs": [
+				20
+			],
+			"Outputs": [
+				50
+			]
+		},
 		"Recipe_DarkMatter": {
 			"Inputs": [
 				5,
@@ -129,6 +147,23 @@
 			],
 			"Outputs": [
 				10
+			]
+		},
+		"Recipe_Alternate_DarkMatter_Crystallization": {
+			"Inputs": [
+				40
+			],
+			"Outputs": [
+				5
+			]
+		},
+		"Recipe_Alternate_DarkMatter_Trap": {
+			"Inputs": [
+				5,
+				20
+			],
+			"Outputs": [
+				20
 			]
 		},
 		"Recipe_FicsiteIngot_Iron": {
@@ -329,6 +364,15 @@
 			],
 			"Outputs": [
 				3
+			]
+		},
+		"Recipe_Alternate_CoatedIronCanister": {
+			"Inputs": [
+				3,
+				3
+			],
+			"Outputs": [
+				6
 			]
 		},
 		"Recipe_Alternate_PureQuartzCrystal": {
