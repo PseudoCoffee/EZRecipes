@@ -6,7 +6,9 @@
 
 		public IEnumerable<int> Outputs { get; set; }
 
-		public double? CustomDuration { get; set; } = null;
+		public double? CustomDurationConstant { get; set; } = null;
+
+		public double? CustomDurationMultiplier { get; set; } = null;
 
 		public RecipeCount()
 		{
@@ -14,18 +16,19 @@
 			Outputs = new List<int>();
 		}
 
-		public RecipeCount(int inputValue, int inputCount, int outputValue, int outputCount, double? customDuration = null)
+		public RecipeCount(int inputValue, int inputCount, int outputValue, int outputCount, double? customDurationConstant = null, double? customDurationMultiplier = null)
 		{
 			Inputs = Enumerable.Repeat(inputValue, inputCount).ToList();
 			Outputs = Enumerable.Repeat(outputValue, outputCount).ToList();
-			CustomDuration = customDuration;
+			CustomDurationConstant = customDurationConstant;
+			CustomDurationMultiplier = customDurationMultiplier;
 		}
 
 		public RecipeCount(IEnumerable<int> inputs, IEnumerable<int> outputs, double? customDuration = null)
 		{
 			Inputs = inputs;
 			Outputs = outputs;
-			CustomDuration = customDuration;
+			CustomDurationConstant = customDuration;
 		}
 	}
 

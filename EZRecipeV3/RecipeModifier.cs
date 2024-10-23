@@ -33,7 +33,8 @@ namespace EZRecipeV3
 							foreach (var ingredient in genericFactoryRecipe.Ingredients)
 							{
 								var matchingIngredient = recipe.Ingredients.FirstOrDefault(i => i.Item == ingredient.Item);
-								if ((matchingIngredient == null || matchingIngredient.Amount != ingredient.Amount) && genericIngredients-- <= 0)
+								if ((matchingIngredient == null || (ingredient?.MatchAmount == true && matchingIngredient.Amount != ingredient.Amount)) 
+									&& genericIngredients-- <= 0)
 								{
 									valid = false;
 								}
@@ -42,7 +43,8 @@ namespace EZRecipeV3
 							foreach (var product in genericFactoryRecipe.Products)
 							{
 								var matchingProduct = recipe.Products.FirstOrDefault(i => i.Item == product.Item);
-								if ((matchingProduct == null || matchingProduct.Amount != product.Amount) && genericProducts-- <= 0)
+								if ((matchingProduct == null || (product?.MatchAmount == true && matchingProduct.Amount != product.Amount)) 
+									&& genericProducts-- <= 0)
 								{
 									valid = false;
 								}
@@ -62,7 +64,7 @@ namespace EZRecipeV3
 						.OrderBy(gfr => gfr.Products.Max(p => p.Amount) / (double)gfr.Ingredients.Max(i => i.Amount))
 						.First();
 
-					recipeCount = new RecipeCount(bestCandidate.Ingredients.Select(i => i.Amount), bestCandidate.Products.Select(p => p.Amount), bestCandidate.CustomDuration);
+					recipeCount = new RecipeCount(bestCandidate.Ingredients.Select(i => i.Amount), bestCandidate.Products.Select(p => p.Amount), bestCandidate.CustomDurationConstant);
 					return true;
 				}
 			}
@@ -88,7 +90,7 @@ namespace EZRecipeV3
 			}
 			else if (recipe.Ingredients.Any(r => recipeConfig.SlugIngredientCount.ContainsKey(r.Item)))
 			{
-				return new(1, recipe.Ingredients.Length, recipeConfig.SlugIngredientCount[recipe.Ingredients[0].Item], recipe.Products.Length);
+				return new(inputValue: 1, inputCount: recipe.Ingredients.Length, outputValue: recipeConfig.SlugIngredientCount[recipe.Ingredients[0].Item], outputCount:  recipe.Products.Length);
 			}
 			else
 			{
@@ -151,6 +153,13 @@ namespace EZRecipeV3
 
 				FactoryVariablePower? factoryVariablePower = GetVariablePowerComsumption(recipe, recipeConfig);
 
+				double? manufacturingDuration = recipeCount.CustomDurationConstant ?? GetManufacturingDuration(recipe, recipeConfig);
+				
+				if (recipeCount.CustomDurationMultiplier != null)
+				{
+					manufacturingDuration *= recipeCount.CustomDurationMultiplier;
+				}
+
 				if (null != ingredients && null != products)
 				{
 					return new Recipe_v3
@@ -159,7 +168,7 @@ namespace EZRecipeV3
 						InternalName = recipe.InternalName,
 						Ingredients = ingredients.ToArray(),
 						Products = products.ToArray(),
-						ManufacturingDuration = recipeCount.CustomDuration ?? GetManufacturingDuration(recipe, recipeConfig),
+						ManufacturingDuration = manufacturingDuration,
 						ManualManufacturingMultiplier = recipe.ManualManufacturingMultiplier,
 						VariablePowerConsumptionConstant = recipe.VariablePowerConsumptionConstant * factoryVariablePower?.VariablePowerConsumptionConstant_Multiplier,
 						VariablePowerConsumptionFactor = recipe.VariablePowerConsumptionFactor * factoryVariablePower?.VariablePowerConsumptionFactor_Multiplier

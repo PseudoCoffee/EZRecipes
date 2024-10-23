@@ -77,8 +77,24 @@
 		}
 	},
 	"CustomGenericFactoryRecipe": {
+		"Build_ConstructorMk1_C": {
+			"CustomDurationConstant": 0.5,
+			"Ingredients": [
+				{
+					"Item": "*",
+					"Amount": 1
+				}
+			],
+			"Products": [
+				{
+					"MatchAmount": false,
+					"Item": "Desc_GenericBiomass_C",
+					"Amount": 10
+				}
+			]
+		},
 		"Build_Converter_C": {
-			"CustomDuration": 2,
+			"CustomDurationConstant": 2,
 			"Ingredients": [
 				{
 					"Item": "Desc_SAMIngot_C",
@@ -99,10 +115,96 @@
 	},
 	"CustomRecipeCount": {
 		"Recipe_QuantumEnergy": {
-			"CustomDuration": 2,
+			"CustomDurationConstant": 2,
 			"Inputs": [],
 			"Outputs": [
 				10
+			]
+		},
+		"Recipe_NuclearFuelRod": {
+			"CustomDurationConstant": 30,
+			"Inputs": [
+				30,
+				30,
+				30
+			],
+			"Outputs": [
+				1
+			]
+		},
+		"Recipe_Alternate_NuclearFuelRod_1": {
+			"CustomDurationConstant": 60,
+			"Inputs": [
+				60,
+				60,
+				60,
+				60
+			],
+			"Outputs": [
+				2
+			]
+		},
+		"Recipe_Alternate_PlutoniumFuelUnit": {
+			"CustomDurationConstant": 120,
+			"Inputs": [
+				60,
+				2
+			],
+			"Outputs": [
+				1
+			]
+		},
+		"Recipe_PlutoniumFuelRod": {
+			"CustomDurationConstant": 60,
+			"Inputs": [
+				5,
+				5,
+				5,
+				5
+			],
+			"Outputs": [
+				1
+			]
+		},
+		"Recipe_Plutonium": {
+			"CustomDurationMultiplier": 1,
+			"Inputs": [
+				2,
+				2
+			],
+			"Outputs": [
+				10
+			]
+		},
+		"Recipe_NitricAcid": {
+			"Inputs": [
+				4,
+				2,
+				4
+			],
+			"Outputs": [
+				2
+			]
+		},
+		"Recipe_SulfuricAcid": {
+			"Inputs": [
+				3,
+				2
+			],
+			"Outputs": [
+				2
+			]
+		},
+		"Recipe_NonFissileUranium": {
+			"Inputs": [
+				21,
+				4,
+				2,
+				2
+			],
+			"Outputs": [
+				4,
+				4
 			]
 		},
 		"Recipe_SpaceElevatorPart_9": {
@@ -133,11 +235,12 @@
 			]
 		},
 		"Recipe_DarkEnergy": {
+			"CustomDurationConstant": 4,
 			"Inputs": [
-				20
+				4
 			],
 			"Outputs": [
-				50
+				10
 			]
 		},
 		"Recipe_DarkMatter": {
@@ -164,6 +267,17 @@
 			],
 			"Outputs": [
 				20
+			]
+		},
+		"Recipe_SingularityCell": {
+			"Inputs": [
+				1,
+				2,
+				6,
+				6
+			],
+			"Outputs": [
+				3
 			]
 		},
 		"Recipe_FicsiteIngot_Iron": {
@@ -201,7 +315,7 @@
 			],
 			"Outputs": [
 				2,
-				3
+				2
 			]
 		},
 		"Recipe_AluminaSolution": {
@@ -212,6 +326,15 @@
 			"Outputs": [
 				6,
 				4
+			]
+		},
+		"Recipe_Alternate_SloppyAlumina": {
+			"Inputs": [
+				3,
+				2
+			],
+			"Outputs": [
+				5
 			]
 		},
 		"Recipe_Alternate_ElectroAluminumScrap": {

@@ -48,14 +48,17 @@ namespace Common.Output.Release_v1
 
 		public class Ingredient
 		{
+			[JsonIgnore]
+			public bool? MatchAmount { get; set; }
 			public required string Item { get; set; }
-			public int Amount { get; set; }
+			public required int Amount { get; set; }
 		}
 
 		public class Product
 		{
+			public bool? MatchAmount { get; set; }
 			public required string Item { get; set; }
-			public int Amount { get; set; }
+			public required int Amount { get; set; }
 		}
 	}
 }
