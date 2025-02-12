@@ -432,12 +432,13 @@
 			]
 		},
 		"Recipe_Alternate_SloppyAlumina": {
+			"CustomDurationConstant": 2,
 			"Inputs": [
-				3,
-				2
+				5,
+				10
 			],
 			"Outputs": [
-				5
+				10
 			]
 		},
 		"Recipe_Alternate_ElectroAluminumScrap": {

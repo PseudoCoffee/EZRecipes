@@ -12,15 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Input\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Properties\recipeConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-		<Folder Include="Input\">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</Folder>
   </ItemGroup>
 	
 </Project>

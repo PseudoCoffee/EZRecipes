@@ -2,7 +2,7 @@
   "profiles": {
     "EZRecipeV3": {
       "commandName": "Project",
-      "commandLineArgs": "\"Files\\Input\" \"Files\\Output\" \"Properties\\recipeConfig.json\""
+      "commandLineArgs": "\"Input\" \"Output\" \"Properties\\recipeConfig.json\""
     }
   }
 }
